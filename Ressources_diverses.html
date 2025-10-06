@@ -1,58 +1,42 @@
 ---
 layout: page
 title: My failures
-background: '/img/bg-failures.jpg'
+background: '/img/bg-liens.jpg'
 ---
 
-    <div class="alert alert-info">
-    {% for reject in site.data.rejections %}
-      {% case reject.type %}
-        {% when 'intro' %}
-          {{reject.title}}
-      {% endcase %}
-    {% endfor %}
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
-    </div>
+ <div class="alert alert-info">
+    Voici une liste de liens intéressants pour toute personne qui s'intéresse au maraîchage de Wallonie.
+  </div>
 
-   	<h4 class="mb-1">What referees have said about my work</h4>
-  		<ul>
-          {% for reject in site.data.rejections %}
-            {% case reject.type %}
-              {% when 'quote' %}
-                <li class="mb-2"><i>{{reject.title}}</i> [<small>{{reject.year}}</small>]</li>
-            {% endcase %}
-          {% endfor %}
-        </ul>
+<style>
+ul li a {
+  font-weight: bold;
+  color: #2c3e50;
+  text-decoration: none;
+}
 
-	<hr>
-  	
-  	<h4 class="mb-1">Paper rejections from academic journals</h4>
-    <ul>
-    {% for year in (2015..2018) %}
-      <li class="mb-2">
-        <b>{{year}}: </b>
-        {% for reject in site.data.rejections %}
-          {% case reject.type %}
-            {% when 'paper' %}
-              {% if reject.year == year %}
-                {{reject.title}},
-              {% endif %}
-          {% endcase %}
-        {% endfor %}  
-      </li>      
-    {% endfor %}
-    </ul>
+ul li a:hover {
+  text-decoration: underline;
+} 
+</style>
 
-    <hr>
+hr>
 
-  	<h4 class="mb-1">Grants I did not get</h4>
-     <ul>
-      {% for reject in site.data.rejections %}
-        {% case reject.type %}
-          {% when 'grant' %}
-            <li class="mb-2">{{reject.title}} [<small>{{reject.year}}</small>]</li>
-        {% endcase %}
-      {% endfor %}        
-	 </ul> 
+<h3>Organismes et structures d’accompagnement</h3>
+<ul>
+  <li><a href="https://www.cra.wallonie.be/fr" target="_blank">CRA-W (Centre wallon de Recherches agronomiques)</a></li>
+  <li><a href="https://www.legumeswallons.be/" target="_blank">CIM (Coordination Initiative Maraîchage Wallonie)</a></li>
+</ul>
+
+<h3>Formations et accompagnement</h3>
+<ul>
+  <li><a href="https://www.crabe.be/" target="_blank">Le Crabe (Centre de Recherche et d’Action sur les Biens communs et l’Écologie)</a></li>
+</ul>
+
+<h3>Sécurité et outils agricoles</h3>
+<ul>
+  <li><a href="https://www.preventagri.be/" target="_blank">PreventAgri — Prévention en agriculture et sécurité au travail</a></li>
+  <li><a href="https://www.fabriekpaysanne.org/fr/home/" target="_blank">La Fabriek Paysanne — Autoconstruction et outillage agricole adapté</a></li>
+</ul>
+
+<hr>

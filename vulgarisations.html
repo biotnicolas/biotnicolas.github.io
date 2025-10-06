@@ -22,13 +22,11 @@ form: false
   <strong>Filtrer par projet :</strong><br>
   <button onclick="filterResources('all')">Tout afficher</button>
   <button onclick="filterResources('projet-nb')">Thèse Nicolas Biot</button>
-  <button onclick="filterResources('projet-condroz')">Projet Cœur de Condroz</button>
-  <button onclick="filterResources('projet-soil')">Sols vivants</button>
+  <button onclick="filterResources('projet-ap')">Thèse Antoine Paris</button>
 
   <br><br><strong>Filtrer par type :</strong><br>
   <button onclick="filterResources('video')">Vidéos</button>
-  <button onclick="filterResources('pdf')">Articles vulgarisés (PDF)</button>
-  <button onclick="filterResources('infographie')">Infographies</button>
+  <button onclick="filterResources('infographie')">Infographies (articles vulgarisés)</button>
 </div>
 
 <!-- 🧾 Exemple : Vidéo 1-->
@@ -103,15 +101,7 @@ form: false
   </p>
 </div>
 
-<!-- 🧾 Exemple : PDF -->
-<div class="resource-card projet-nb pdf">
-  <p><strong>Elaboration d'indicateurs pour évaluer la viabilité des fermes sur petites et moyennes surfaces</strong></p>
-  <a href="/docs/Résumé_Heine_2025_fr.pdf" target="_blank">📄 Télécharger le PDF (4 pages)</a>
-  <p class="tags">
-    <button class="badge-project" onclick="filterResources('projet-nb')">Thèse Nicolas Biot</button>
-    <button class="badge-type" onclick="filterResources('pdf')">PDF</button>
-  </p>
-</div>
+
 
 <!-- 🧾 Exemple : Infographie -->
 <div class="resource-card projet-nb infographie">
