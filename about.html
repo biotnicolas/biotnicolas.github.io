@@ -1,84 +1,16 @@
 ---
 layout: page
-title: More about me
+title: A propos de la page
 background: '/img/bg-about.jpg'
 ---
 
-
-	<div style="text-align: centered;">
-	<a href="{{ site.data.personal.curriculum}}" target="_blank" class="btn btn-sm btn-outline-primary">
-	<i class="fal fa-arrow-to-bottom mr-2"></i>My CV</a>
-
-	  <span class="info" id="email_1">
-	      <a href=""  onmouseover="safeEmailAddress('{{ site.data.personal.email }}', 'email_1');" class="btn btn-sm btn-outline-primary">
-	            <i class="fal fa-envelope"></i>
-	      </a>
-	  </span> 
-
-{% for profile in site.data.personal.profiles %}
-  {% if profile.network == 'Figshare' %}
-		<a href="{{ profile.url }}" target="_blank" class="btn btn-sm btn-outline-primary">
-		<i class="fal fa-share-alt"></i></a>
-	{% elsif profile.network == 'BlueSky' %}
-		<a href="{{ profile.url }}" target="_blank" class="btn btn-sm btn-outline-primary">
-		<i class="fal fa-sun"></i></a>
-	{% elsif profile.network == 'ORCID' %}
-		<a href="{{ profile.url }}" target="_blank" class="btn btn-sm btn-outline-primary">
-		<i class=""></i>iD</a>	
-	{% elsif profile.network == 'Github' %}
-		<a href="{{ profile.url }}" target="_blank" class="btn btn-sm btn-outline-primary">
-		<i class="fab fa-github"></i></a>
-  	{% endif %}
-{% endfor %}	
+<p>
+Ce site a pour but de centraliser les résultats de recherches en lien avec le <strong>maraîchage en Wallonie</strong>. Celui-ci a été créé par des chercheurs de l'UCLouvain du labo PEPA.
+</p>
 
 
-	</div>
+<p>
+Pour en savoir plus, consultez le site du labo PEPA sur:  
+<a href="https://www.pepa.science/" target="_blank">Laboratoire XYZ</a>
+</p>
 
-	<hr>
-
-	{{ site.data.personal.intro.body | markdownify }}
-
-	<hr>
-
-
-    {% for ms in site.data.misc %}
-        <h4 class="mb-1">{{ ms.name }}</h4>
-        <p>{{ ms.description | markdownify }}</p>
-        <hr>
-    {% endfor %}
-
-
-
-
-<h4>Books I liked</h4>
-          
-
-<ul>
-    {% for book in site.data.book %}
-
-    	<li>
-        {% if book.url %}
-                  <a href="{{ book.url }}" target="_blank">
-        {% endif %} 
-        <b>{{ book.title }}</b> 
-        {% if book.url %}
-                  </a>
-        {% endif %} 
-        by {{ book.author }}
-    </li>
-
-    {% endfor %}
-</ul>
-
-
-
-
-
-
-    <script>
-  function safeEmailAddress(name, element) {
-    dnssuffix = 'be';
-    domain = 'uclouvain';
-    document.getElementById(element).innerHTML = '<a href="mailto:'+name+'@'+domain+'.'+dnssuffix+'" class="btn btn-sm btn-outline-primary"><i class="fal fa-envelope"></i>';
-  }
-  </script>
