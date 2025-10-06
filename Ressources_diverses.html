@@ -4,46 +4,99 @@ title: Ressources diverses
 background: '/img/bg-liens.jpg'
 ---
 
- <div class="alert alert-info">
-    Voici une liste de liens intéressants pour toute personne qui s'intéresse au maraîchage de Wallonie.
-  </div>
+ <!-- Introduction -->
+<div class="alert alert-info shadow-sm">
+  🌱 Voici une liste de liens utiles pour toute personne qui s'intéresse au <strong>maraîchage en Wallonie</strong>.
+</div>
 
+<!-- Styles personnalisés -->
 <style>
-ul li a {
-  font-weight: bold;
-  color: #2c3e50;
-  text-decoration: none;
-}
+  .resource-section {
+    margin-bottom: 3rem;
+  }
 
-ul li a:hover {
-  text-decoration: underline;
-} 
+  .resource-card {
+    background-color: #f8f9fa;
+    border-left: 5px solid #5cb85c;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+  }
+
+  .resource-card:hover {
+    transform: translateY(-3px);
+    background-color: #eef7ee;
+  }
+
+  .resource-card a {
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: #2c3e50;
+    text-decoration: none;
+  }
+
+  .resource-card a:hover {
+    text-decoration: underline;
+    color: #1a7f37;
+  }
+
+  .resource-title {
+    font-size: 1.4rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #5cb85c;
+    display: inline-block;
+    padding-bottom: 0.25rem;
+  }
 </style>
 
-<h3>Organismes et structures d’accompagnement</h3>
-<ul>
-  <li><a href="https://www.cra.wallonie.be/fr" target="_blank">CRA-W (Centre wallon de Recherches agronomiques)</a></li>
-  <li><a href="https://www.legumeswallons.be/" target="_blank">CIM (Coordination Initiative Maraîchage Wallonie)</a></li>
-  <li><a href="https://www.biowallonie.com/" target="_blank">Biowallonie — Accompagnement en agriculture biologique en Wallonie</a></li>
-  <li><a href="https://www.credal.be/" target="_blank">Crédal — Financement solidaire et accompagnement de projets agricoles et durables</a></li>
+<!-- Organismes et structures d’accompagnement -->
+<div class="resource-section">
+  <h3 class="resource-title">🏢 Organismes et structures d’accompagnement</h3>
 
-</ul>
+  <div class="resource-card">
+    <a href="https://www.cra.wallonie.be/fr" target="_blank">CRA-W — Centre wallon de Recherches agronomiques</a>
+  </div>
+  <div class="resource-card">
+    <a href="https://www.legumeswallons.be/" target="_blank">CIM — Coordination Initiative Maraîchage Wallonie</a>
+  </div>
+  <div class="resource-card">
+    <a href="https://www.biowallonie.com/" target="_blank">Biowallonie — Accompagnement en agriculture biologique</a>
+  </div>
+  <div class="resource-card">
+    <a href="https://www.credal.be/" target="_blank">Crédal — Financement solidaire et accompagnement de projets agricoles</a>
+  </div>
+</div>
 
-<h3>Formations</h3>
-<ul>
-  <li><a href="https://www.crabe.be/" target="_blank">Le Crabe (Centre de Recherche et d’Action sur les Biens communs et l’Écologie)</a></li>
-    <li><a href="https://www.froidmontinsertion.be/" target="_blank">Centre de Froidmont — Projet de formation et réinsertion par le maraîchage biologique</a></li>
-    <li><a href="https://www.ifapme.be/formations/chef-dentreprise/agriculture-maraicher-bio-hfx" target="_blank">IFAPME — Formation en maraîchage (certificat d’apprentissage et de chef d’entreprise)</a></li>
-  
+<!-- Formations -->
+<div class="resource-section">
+  <h3 class="resource-title">🎓 Formations</h3>
 
-</ul>
+  <div class="resource-card">
+    <a href="https://www.crabe.be/" target="_blank">Le Crabe — Formations et accompagnement pour projets agroécologiques</a>
+  </div>
+  <div class="resource-card">
+    <a href="https://www.froidmontinsertion.be/" target="_blank">Centre de Froidmont — Formation et réinsertion par le maraîchage</a>
+  </div>
+  <div class="resource-card">
+    <a href="https://www.ifapme.be/formations/chef-dentreprise/agriculture-maraicher-bio-hfx" target="_blank">IFAPME — Formation en maraîchage bio</a>
+  </div>
+</div>
 
-<h3>Sécurité et outils agricoles</h3>
-<ul>
-  <li><a href="https://www.preventagri.be/" target="_blank">PreventAgri — Prévention en agriculture et sécurité au travail</a></li>
-  <li><a href="https://www.fabriekpaysanne.org/fr/home/" target="_blank">La Fabriek Paysanne — Autoconstruction et outillage agricole adapté</a></li>
-  <li><a href="https://www.biopousses.fr/ergonomie-et-penibilite-en-maraichage/" target="_blank">Biopousse — Ergonomie, outils et organisation du travail en maraîchage biologique</a></li>
+<!-- Sécurité et outils agricoles -->
+<div class="resource-section">
+  <h3 class="resource-title">🛠️ Sécurité et outils agricoles</h3>
 
-</ul>
+  <div class="resource-card">
+    <a href="https://www.preventagri.be/" target="_blank">PreventAgri — Sécurité au travail en agriculture</a>
+  </div>
+  <div class="resource-card">
+    <a href="https://www.fabriekpaysanne.org/fr/home/" target="_blank">La Fabriek Paysanne — Autoconstruction et outillage adapté</a>
+  </div>
+  <div class="resource-card">
+    <a href="https://www.biopousses.fr/ergonomie-et-penibilite-en-maraichage/" target="_blank">Biopousse — Ergonomie en maraîchage biologique</a>
+  </div>
+</div>
 
-<hr>
