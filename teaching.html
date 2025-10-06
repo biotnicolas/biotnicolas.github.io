@@ -5,55 +5,183 @@ background: '/img/bg-vulga.jpg'
 form: false
 ---
 
-<style>
-  .hidden-tag {
-    display: none;
-  }
-
-  .badge-project {
-    background-color: #2c3e50;
-    color: #fff;
-    padding: 4px 10px;
-    border-radius: 15px;
-    font-size: 0.85em;
-    font-weight: 500;
-    display: inline-block;
-    margin-top: 10px;
-  }
-
-  .video-card {
-    margin-bottom: 40px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #ddd;
-  }
-</style>
 
   <div class="alert alert-info">
     Cette section a pour but de partager toutes les ressources vulgarisées qui sont issues des différents projets de recherche.
   </div>
 
-<div class="video-card projet-nb video">
-  
-<iframe width="560" height="315" src="https://www.youtube.com/embed/N8A85kG3X8o?si=9gjREj1JVJAPsYOA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-  <!-- Tags associés -->
+---
+layout: page
+title: Publications vulgarisées
+background: '/img/bg-vulga.jpg'
+form: false
+---
+
+<!-- Filtres -->
+<div id="filters" style="margin-bottom: 20px;">
+  <strong>Filtrer par projet :</strong><br>
+  <button onclick="filterResources('all')">Tout afficher</button>
+  <button onclick="filterResources('projet-nb')">Thèse Nicolas Biot</button>
+  <button onclick="filterResources('projet-condroz')">Projet Cœur de Condroz</button>
+  <button onclick="filterResources('projet-soil')">Sols vivants</button>
+
+  <br><br><strong>Filtrer par type :</strong><br>
+  <button onclick="filterResources('video')">Vidéos</button>
+  <button onclick="filterResources('pdf')">Articles vulgarisés (PDF)</button>
+  <button onclick="filterResources('infographie')">Infographies</button>
+</div>
+
+<!-- 🧾 Exemple : Vidéo 1-->
+<div class="resource-card projet-nb video">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/N8A85kG3X8o?si=9gjREj1JVJAPsYOA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   <p class="tags">
-    <span class="tag hidden-tag">vidéo</span>
-    <span class="badge-project">Thèse Nicolas Biot</span>
+    <button class="badge-project" onclick="filterResources('projet-nb')">Thèse Nicolas Biot</button>
+    <button class="badge-type" onclick="filterResources('video')">Vidéo</button>
   </p>
 </div>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/YZJhL3vM2Yk?si=TTfuMw98psIBHJSM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<!-- 🧾 Exemple : Vidéo 2-->
+<div class="resource-card projet-nb video">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/YZJhL3vM2Yk?si=TTfuMw98psIBHJSM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <p class="tags">
+    <button class="badge-project" onclick="filterResources('projet-nb')">Thèse Nicolas Biot</button>
+    <button class="badge-type" onclick="filterResources('video')">Vidéo</button>
+  </p>
+</div>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/lK0sb8Co0Ms?si=35hy74VJ3ISSyc50" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<!-- 🧾 Exemple : Vidéo 3-->
+<div class="resource-card projet-nb video">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/lK0sb8Co0Ms?si=35hy74VJ3ISSyc50" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <p class="tags">
+    <button class="badge-project" onclick="filterResources('projet-nb')">Thèse Nicolas Biot</button>
+    <button class="badge-type" onclick="filterResources('video')">Vidéo</button>
+  </p>
+</div>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Hbmd5f8prK4?si=y5EBC5Fqk7z4JTw2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<!-- 🧾 Exemple : Vidéo 4-->
+<div class="resource-card projet-nb video">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/Hbmd5f8prK4?si=y5EBC5Fqk7z4JTw2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <p class="tags">
+    <button class="badge-project" onclick="filterResources('projet-nb')">Thèse Nicolas Biot</button>
+    <button class="badge-type" onclick="filterResources('video')">Vidéo</button>
+  </p>
+</div>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ZgX57xjllnA?si=_rZqFAUatkvmDFbv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<!-- 🧾 Exemple : Vidéo 5-->
+<div class="resource-card projet-nb video">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/ZgX57xjllnA?si=_rZqFAUatkvmDFbv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <p class="tags">
+    <button class="badge-project" onclick="filterResources('projet-nb')">Thèse Nicolas Biot</button>
+    <button class="badge-type" onclick="filterResources('video')">Vidéo</button>
+  </p>
+</div>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/LLZS3_ma6J4?si=sjz_Co5izvmVPZBx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<!-- 🧾 Exemple : Vidéo 6-->
+<div class="resource-card projet-nb video">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/LLZS3_ma6J4?si=sjz_Co5izvmVPZBx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <p class="tags">
+    <button class="badge-project" onclick="filterResources('projet-nb')">Thèse Nicolas Biot</button>
+    <button class="badge-type" onclick="filterResources('video')">Vidéo</button>
+  </p>
+</div>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/3OfSe-tEUZ8?si=_eCrvNEK_RGkepjM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<!-- 🧾 Exemple : Vidéo 7-->
+<div class="resource-card projet-nb video">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/3OfSe-tEUZ8?si=_eCrvNEK_RGkepjM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <p class="tags">
+    <button class="badge-project" onclick="filterResources('projet-nb')">Thèse Nicolas Biot</button>
+    <button class="badge-type" onclick="filterResources('video')">Vidéo</button>
+  </p>
+</div>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/RBTYxZizrU8?si=a8m-IFfkc6L84Z-U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<!-- 🧾 Exemple : Vidéo 8-->
+<div class="resource-card projet-nb video">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/RBTYxZizrU8?si=a8m-IFfkc6L84Z-U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <p class="tags">
+    <button class="badge-project" onclick="filterResources('projet-nb')">Thèse Nicolas Biot</button>
+    <button class="badge-type" onclick="filterResources('video')">Vidéo</button>
+  </p>
+</div>
+
+<!-- 🧾 Exemple : PDF -->
+<div class="resource-card projet-nb pdf">
+  <p><strong>Elaboration d'indicateurs pour évaluer la viabilité des fermes sur petites et moyennes surfaces</strong></p>
+  <a href="/docs/Résumé_Heine_2025_fr.pdf" target="_blank">📄 Télécharger le PDF (4 pages)</a>
+  <p class="tags">
+    <button class="badge-project" onclick="filterResources('projet-nb')">Thèse Nicolas Biot</button>
+    <button class="badge-type" onclick="filterResources('pdf')">PDF</button>
+  </p>
+</div>
+
+<!-- 🧾 Exemple : Infographie -->
+<div class="resource-card projet-nb infographie">
+  <p><strong>Elaboration d'indicateurs pour évaluer la viabilité des fermes sur petites et moyennes surfaces</strong></p>
+  <img src="/docs/Résumé_Heine_2025_fr.pdf" alt="Indicateur viabilité" width="400">
+  <p class="tags">
+    <button class="badge-project" onclick="filterResources('projet-nb')">Thèse Nicolas Biot</button>
+    <button class="badge-type" onclick="filterResources('infographie')">Infographie</button>
+  </p>
+</div>
+
+<!-- 🎨 CSS -->
+<style>
+  .resource-card {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .badge-project, .badge-type {
+    background-color: #2c3e50;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 0.85em;
+    font-weight: 500;
+    display: inline-block;
+    margin: 5px 5px 0 0;
+    border: none;
+    cursor: pointer;
+  }
+
+  .badge-project:hover, .badge-type:hover {
+    background-color: #1a252f;
+  }
+
+  #filters button {
+    margin: 5px 8px 10px 0;
+    padding: 6px 12px;
+    border-radius: 4px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+  }
+
+  #filters button:hover {
+    background-color: #0056b3;
+  }
+</style>
+
+<!-- 🧠 JS pour le filtre -->
+<script>
+function filterResources(filter) {
+  const cards = document.querySelectorAll('.resource-card');
+
+  cards.forEach(card => {
+    if (filter === 'all' || card.classList.contains(filter)) {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+</script>
+
+
+
+
+
+
 
 
