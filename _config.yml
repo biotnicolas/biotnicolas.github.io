@@ -1,18 +1,18 @@
-title:              Guillaume Lobet
-email:              g.lobet@fz-juelich.de
-description:        My personal website
-author:             Guillaume Lobet
+title:              Maraîchage en Wallonie
+email:              /
+description:        /
+author:             Nicolas Biot
 baseurl:            /
-url:                https://guillaumelobet.github.io/
+url:                https://github.com/biotnicolas
 
 # Social Profiles
-twitter_username:   guillaumelobet
-github_username:    guillaumelobet
+twitter_username:   /
+github_username:    biotnicolas
 facebook_username:  /
-linkedin_username:  guillaumelobet
+linkedin_username:  /
 
 # Add your google-analytics ID here to activate google analytics
-google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
+google_analytics:   / # out your google-analytics code
 
 # Build settings
 markdown:           kramdown
