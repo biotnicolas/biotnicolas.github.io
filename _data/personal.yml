@@ -90,6 +90,6 @@ intro:
  
 
 footer: >
-    Website created and maintained by ourselves with <span style="color: red;"><i class="fas fa-heart"></i></span> and <img src="img/fennel.svg" alt="fenouil" style="width: 64px; vertical-align: middle; margin-left: 5px; margin-right: 5px;">. Heavily relying on <a href="https://getbootstrap.com/">Bootstrap 4.0</a> and <a href="https://fontawesome.com">Font Awesome 5</a>. Also tacking advantage of the awesome badges from <a href="https://www.altmetric.com/">Altmetrics</a> and <a href="https://www.dimensions.ai/">Dimensions</a>. Hosted on <i class="fab fa-github"></i>. Source code available <a href="https://github.com/biotnicolas/biotnicolas.github.io">here</a>.
+    Website created and maintained by ourselves with <span style="color: red;"><i class="fas fa-heart"></i></span> and <img src="img/fennel.svg" alt="fenouil" style="width: 64px; height: auto; vertical-align: middle; margin-left: 5px; margin-right: 5px; display: inline-block;">. Heavily relying on <a href="https://getbootstrap.com/">Bootstrap 4.0</a> and <a href="https://fontawesome.com">Font Awesome 5</a>. Also tacking advantage of the awesome badges from <a href="https://www.altmetric.com/">Altmetrics</a> and <a href="https://www.dimensions.ai/">Dimensions</a>. Hosted on <i class="fab fa-github"></i>. Source code available <a href="https://github.com/biotnicolas/biotnicolas.github.io">here</a>.
 
 
