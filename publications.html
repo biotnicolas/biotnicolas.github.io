@@ -20,10 +20,10 @@ form: false
   <button onclick="filterResources('projet-cc')">Thèse Céline Chevalier</button>
 
   <br><br><strong>Filtrer par type :</strong><br>
-  <button onclick="filterResources('article')">📄Article</button>
-  <button onclick="filterResources('memoire')">📘Mémoire</button>
-  <button onclick="filterResources('rapport')">📑Rapport</button>
-  <button onclick="filterResources('thèse')">🎓Thèse</button>
+  <button onclick="filterResources('article')">📄Articles</button>
+  <button onclick="filterResources('memoire')">📘Mémoires</button>
+  <button onclick="filterResources('rapport')">📑Rapports</button>
+  <button onclick="filterResources('thèse')">🎓Thèses</button>
 </div>
 
 <!-- Barre de recherche par mot-clé -->
@@ -35,7 +35,7 @@ form: false
 <!-- Ressources -->
 
 <!-- Exemple : Article(s) / Mémoire(s) que tu avais déjà -->
-<div class="resource-card projet-nb article">
+<div class="resource-card projet-nb article PEPA">
   <p>
     <span class="icon article-icon" title="Article">📄</span>
     <strong>Heine, B., Gaspart, F., & Biot, N. (2025).</strong> Developing indicators to assess the viability of small‑ and medium‑scale farms: A case study of market gardening farms at the regional scale. <a href="https://doi.org/10.3389/fsufs.2025.1608860" target="_blank">Lien vers l'article</a>
@@ -45,7 +45,7 @@ form: false
   <button class="badge-type" onclick="filterResources('article')">Article</button>
 </div>
 
-<div class="resource-card projet-nb article">
+<div class="resource-card projet-nb article PEPA">
   <p>
     <span class="icon article-icon" title="Article">📄</span>
     <strong>Biot, N., Hecquet, C., Maréchal, K., Lobet, G., & Dendoncker, N. (2024).</strong> The importance of distribution channels and food supply chain challenges on the viability of market gardening farms: Insights from market gardeners in Belgium at a territorial level. <a href="https://hal.science/hal-04594127" target="_blank">Lien vers l'article</a>
@@ -55,7 +55,7 @@ form: false
   <button class="badge-type" onclick="filterResources('article')">Article</button>
 </div>
 
-<div class="resource-card projet-nb memoire">
+<div class="resource-card projet-nb memoire PEPA">
   <p>
     <span class="icon memoire-icon" title="Mémoire">📘</span>
     <strong>Heine, B., Gaspart, F., & Biot, N. (2025).</strong> Étude de la viabilité du maraîchage diversifié en Cœur de Condroz. <a href="https://hdl.handle.net/2078.2/41975" target="_blank">Lien vers le mémoire complet (PDF)</a>
@@ -66,7 +66,7 @@ form: false
 </div>
 
 <!-- Mémoire - Augustin Peeters -->
-<div class="resource-card projet-nb memoire">
+<div class="resource-card projet-nb memoire PEPA">
   <p>
     <span class="icon memoire-icon" title="Mémoire">📘</span>
     <strong>Peeters, A. (2025).</strong> Conditions de travail en maraîchage : Étude des points critiques et stratégies d’amélioration à l’échelle d’un territoire à travers une approche transdisciplinaire. Étude de cas en Cœur de Condroz, Wallonie.
@@ -78,7 +78,7 @@ form: false
 </div>
 
 <!-- Mémoire - Félix Ransquin -->
-<div class="resource-card projet-nb memoire">
+<div class="resource-card projet-nb memoire PEPA">
   <p>
     <span class="icon memoire-icon" title="Mémoire">📘</span>
     <strong>Ransquin, F. (2025).</strong> Étude des freins et leviers logistiques de la commercialisation groupée en circuit court : Analyse à travers l’étude de cas des maraîchers en Condroz.
@@ -90,7 +90,7 @@ form: false
 </div>
 
 <!-- Mémoire - Auréliane Beauve & Bastien Liégeois -->
-<div class="resource-card projet-nb memoire">
+<div class="resource-card projet-nb memoire PEPA">
   <p>
     <span class="icon memoire-icon" title="Mémoire">📘</span>
     <strong>Beauve, A., & Liégeois, B. (2024).</strong> Freins et leviers à la consommation de fruits et légumes frais en circuits courts en Cœur de Condroz et influence des crises sur leur consommation.
@@ -103,7 +103,7 @@ form: false
 
 
 <!-- Thèse de Chevalier (Sytra / UCL) -->
-<div class="resource-card sytra memoire">
+<div class="resource-card sytra PEPA projet-cc thèse">
   <p>
     <span class="icon memoire-icon" title="Thèse">🎓</span>
     <strong>Chevalier, C. (2022).</strong> Exploring intercropping in market gardening. <a href="https://dial.uclouvain.be/pr/boreal/object/boreal:263448" target="_blank">Lien vers la thèse (PDF)</a>
@@ -111,7 +111,7 @@ form: false
   <button class="badge-project" onclick="filterResources('projet-cc')">Thèse Céline Chevalier</button>
   <button class="badge-project" onclick="filterResources('sytra')">Equipe Sytra</button>
   <button class="badge-project" onclick="filterResources('PEPA')">Equipe PEPA</button>
-  <button class="badge-type" onclick="filterResources('memoire')">Thèse</button>
+  <button class="badge-type" onclick="filterResources('thèse')">Thèse</button>
 </div>
 
 <!-- Rapport de Sytra : état des lieux & scénarios -->
