@@ -7,61 +7,44 @@ form: false
 
 <h1 class="page-title">{{ page.title }}</h1>
 <div class="alert alert-info">
-  🎓 Cette section rassemble les <strong>articles scientifiques et mémoires</strong> issus de différents projets de recherches, à partir de 2022. 
+  🎓 Cette section rassemble les <strong>articles scientifiques, mémoires et rapports</strong> issus de différents projets de recherches, à partir de 2022.
 </div>
+
 <!-- Filtres -->
 <div id="filters" style="margin-bottom: 20px;">
   <strong>Filtrer par projet :</strong><br>
   <button onclick="filterResources('all')">Tout afficher</button>
   <button onclick="filterResources('projet-nb')">Thèse Nicolas Biot</button>
+  <button onclick="filterResources('sytra')">Sytra / Équipe Sytra</button>
 
   <br><br><strong>Filtrer par type :</strong><br>
   <button onclick="filterResources('article')">Articles</button>
   <button onclick="filterResources('memoire')">Mémoires</button>
+  <button onclick="filterResources('rapport')">Rapports</button>
 </div>
 
 <!-- Ressources -->
 
-<!-- Article -->
+<!-- Exemple Article -->
 <div class="resource-card projet-nb article">
   <p><strong>Heine, B., Gaspart, F., & Biot, N. (2025).</strong> Developing indicators to assess the viability of small- and medium-scale farms: A case study of market gardening farms at the regional scale. <a href="https://doi.org/10.3389/fsufs.2025.1608860" target="_blank">Lien vers l'article</a></p>
   <button class="badge-project" onclick="filterResources('projet-nb')">Thèse Nicolas Biot</button>
   <button class="badge-type" onclick="filterResources('article')">Article</button>
 </div>
 
-<!-- Article -->
-<div class="resource-card projet-nb article">
-  <p><strong>Biot, N., Hecquet, C., Maréchal, K., Lobet, G., & Dendoncker, N. (2024).</strong> The importance of distribution channels and food supply chain challenges on the viability of market gardening farms: Insights from market gardeners in Belgium at a territorial level. <a href="https://hal.science/hal-04594127" target="_blank">Lien vers l'article</a></p>
-  <button class="badge-project" onclick="filterResources('projet-nb')">Thèse Nicolas Biot</button>
-  <button class="badge-type" onclick="filterResources('article')">Article</button>
+<!-- ... (tes autres articles et mémoires) ... -->
+
+<!-- Exemple Rapport – Sytra -->
+<div class="resource-card sytra rapport">
+  <p><strong>Sytra. (2025).</strong> Vers un approvisionnement alimentaire résilient de la région de Bruxelles-Capitale : scénarios possibles basés sur une analyse des barrières et une approche prospective exploratoire. <a href="https://sytra.be/fr/publications" target="_blank">Lien vers le rapport sur Sytra</a></p>
+  <button class="badge-project" onclick="filterResources('sytra')">Sytra</button>
+  <button class="badge-type" onclick="filterResources('rapport')">Rapport</button>
 </div>
 
-<!-- Mémoire -->
-<div class="resource-card projet-nb memoire">
-  <p><strong>Heine, B., Gaspart, F., & Biot, N. (2025).</strong> Étude de la viabilité du maraîchage diversifié en Cœur de Condroz. <a href="https://hdl.handle.net/2078.2/41975" target="_blank">Lien vers le mémoire complet (PDF)</a></p>
-  <button class="badge-project" onclick="filterResources('projet-nb')">Thèse Nicolas Biot</button>
-  <button class="badge-type" onclick="filterResources('memoire')">Mémoire</button>
-</div>
-
-<!-- Mémoire -->
-<div class="resource-card projet-nb memoire">
-  <p><strong>Peeters, A. (2025).</strong> Conditions de travail en maraîchage: Étude des points critiques et stratégies d’amélioration à l’échelle d’un territoire à travers une approche transdisciplinaire. Étude de cas en Cœur de Condroz, Wallonie. <a href="https://hdl.handle.net/2078.2/43235" target="_blank">Lien vers le mémoire complet (PDF)</a></p>
-  <button class="badge-project" onclick="filterResources('projet-nb')">Thèse Nicolas Biot</button>
-  <button class="badge-type" onclick="filterResources('memoire')">Mémoire</button>
-</div>
-
-<!-- Mémoire -->
-<div class="resource-card projet-nb memoire">
-  <p><strong>Ransquin, F. (2025).</strong> Étude des freins et leviers logistiques de la commercialisation groupée en circuit court: Analyse à travers l’étude de cas des maraîchers en Condroz. <a href="https://hdl.handle.net/2078.2/43266" target="_blank">Lien vers le mémoire complet (PDF)</a></p>
-  <button class="badge-project" onclick="filterResources('projet-nb')">Thèse Nicolas Biot</button>
-  <button class="badge-type" onclick="filterResources('memoire')">Mémoire</button>
-</div>
-
-<!-- Mémoire -->
-<div class="resource-card projet-nb memoire">
-  <p><strong>Beauve, A., & Liégeois, B. (2024).</strong> Freins et leviers à la consommation de fruits et légumes frais en circuits courts en Cœur de Condroz et influence des crises sur leur consommation. <a href="https://researchportal.unamur.be/fr/studentTheses/freins-et-leviers-%C3%A0-la-consommation-de-fruits-et-l%C3%A9gumes-frais-en" target="_blank">Lien vers le mémoire complet (PDF)</a></p>
-  <button class="badge-project" onclick="filterResources('projet-nb')">Thèse Nicolas Biot</button>
-  <button class="badge-type" onclick="filterResources('memoire')">Mémoire</button>
+<div class="resource-card sytra rapport">
+  <p><strong>Sytra. (2025).</strong> Schémas semenciers et choix variétaux en maraîchage biologique. <a href="https://sytra.be/fr/archives" target="_blank">Lien vers le rapport</a></p>
+  <button class="badge-project" onclick="filterResources('sytra')">Sytra</button>
+  <button class="badge-type" onclick="filterResources('rapport')">Rapport</button>
 </div>
 
 <!-- CSS -->
