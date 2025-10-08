@@ -18,31 +18,85 @@ form: false
   <button onclick="filterResources('sytra')">Sytra / Équipe Sytra</button>
 
   <br><br><strong>Filtrer par type :</strong><br>
-  <button onclick="filterResources('article')">Articles</button>
-  <button onclick="filterResources('memoire')">Mémoires</button>
-  <button onclick="filterResources('rapport')">Rapports</button>
+  <button onclick="filterResources('article')">Article</button>
+  <button onclick="filterResources('memoire')">Mémoire</button>
+  <button onclick="filterResources('rapport')">Rapport</button>
+</div>
+
+<!-- Barre de recherche par mot-clé -->
+<div style="margin-bottom: 20px;">
+  <label for="searchInput"><strong>Rechercher un mot-clé :</strong></label><br>
+  <input type="text" id="searchInput" placeholder="Entrez un mot-clé..." style="padding: 6px; width: 100%; max-width: 400px; margin-top: 5px;">
 </div>
 
 <!-- Ressources -->
 
-<!-- Exemple Article -->
+<!-- Exemple : Article(s) / Mémoire(s) que tu avais déjà -->
 <div class="resource-card projet-nb article">
-  <p><strong>Heine, B., Gaspart, F., & Biot, N. (2025).</strong> Developing indicators to assess the viability of small- and medium-scale farms: A case study of market gardening farms at the regional scale. <a href="https://doi.org/10.3389/fsufs.2025.1608860" target="_blank">Lien vers l'article</a></p>
+  <p>
+    <span class="icon article-icon" title="Article">📄</span>
+    <strong>Heine, B., Gaspart, F., & Biot, N. (2025).</strong> Developing indicators to assess the viability of small‑ and medium‑scale farms: A case study of market gardening farms at the regional scale. <a href="https://doi.org/10.3389/fsufs.2025.1608860" target="_blank">Lien vers l'article</a>
+  </p>
   <button class="badge-project" onclick="filterResources('projet-nb')">Thèse Nicolas Biot</button>
   <button class="badge-type" onclick="filterResources('article')">Article</button>
 </div>
 
-<!-- ... (tes autres articles et mémoires) ... -->
+<div class="resource-card projet-nb article">
+  <p>
+    <span class="icon article-icon" title="Article">📄</span>
+    <strong>Biot, N., Hecquet, C., Maréchal, K., Lobet, G., & Dendoncker, N. (2024).</strong> The importance of distribution channels and food supply chain challenges on the viability of market gardening farms: Insights from market gardeners in Belgium at a territorial level. <a href="https://hal.science/hal-04594127" target="_blank">Lien vers l'article</a>
+  </p>
+  <button class="badge-project" onclick="filterResources('projet-nb')">Thèse Nicolas Biot</button>
+  <button class="badge-type" onclick="filterResources('article')">Article</button>
+</div>
 
-<!-- Exemple Rapport – Sytra -->
+<div class="resource-card projet-nb memoire">
+  <p>
+    <span class="icon memoire-icon" title="Mémoire">📘</span>
+    <strong>Heine, B., Gaspart, F., & Biot, N. (2025).</strong> Étude de la viabilité du maraîchage diversifié en Cœur de Condroz. <a href="https://hdl.handle.net/2078.2/41975" target="_blank">Lien vers le mémoire complet (PDF)</a>
+  </p>
+  <button class="badge-project" onclick="filterResources('projet-nb')">Thèse Nicolas Biot</button>
+  <button class="badge-type" onclick="filterResources('memoire')">Mémoire</button>
+</div>
+
+<!-- … tes autres mémoires … -->
+
+<!-- Thèse de Chevalier (Sytra / UCL) -->
+<div class="resource-card sytra memoire">
+  <p>
+    <span class="icon memoire-icon" title="Thèse">🎓</span>
+    <strong>Chevalier, C. (2022).</strong> Exploring intercropping in market gardening. <a href="https://dial.uclouvain.be/pr/boreal/object/boreal:263448" target="_blank">Lien vers la thèse (PDF)</a>
+  </p>
+  <button class="badge-project" onclick="filterResources('sytra')">Sytra</button>
+  <button class="badge-type" onclick="filterResources('memoire')">Thèse</button>
+</div>
+
+<!-- Rapport de Sytra : état des lieux & scénarios -->
 <div class="resource-card sytra rapport">
-  <p><strong>Sytra. (2025).</strong> Vers un approvisionnement alimentaire résilient de la région de Bruxelles-Capitale : scénarios possibles basés sur une analyse des barrières et une approche prospective exploratoire. <a href="https://sytra.be/fr/publications" target="_blank">Lien vers le rapport sur Sytra</a></p>
+  <p>
+    <span class="icon rapport-icon" title="Rapport">📑</span>
+    Riera, A., Antier, C., & Baret, P. (2020). <em>État des lieux et scénarios à horizon 2050 de la filière légumière en Région wallonne</em>. Sytra. <a href="https://sytra.be/publication/vegetable-sector-wallonia/" target="_blank">Lien vers le rapport</a>
+  </p>
   <button class="badge-project" onclick="filterResources('sytra')">Sytra</button>
   <button class="badge-type" onclick="filterResources('rapport')">Rapport</button>
 </div>
 
+<!-- Autre rapport Sytra trouvé : identification des barrières (2024) -->
 <div class="resource-card sytra rapport">
-  <p><strong>Sytra. (2025).</strong> Schémas semenciers et choix variétaux en maraîchage biologique. <a href="https://sytra.be/fr/archives" target="_blank">Lien vers le rapport</a></p>
+  <p>
+    <span class="icon rapport-icon" title="Rapport">📑</span>
+    Chevalier, C., Baret, P., et al. (2024). <em>Identification of barriers to the use of intercropping in 12 European case studies</em>. <a href="https://sytra.be/publication/identification-of-barriers-to-the-use-of-intercropping-in-12-european-case-studies/" target="_blank">Lien vers le rapport</a>
+  </p>
+  <button class="badge-project" onclick="filterResources('sytra')">Sytra</button>
+  <button class="badge-type" onclick="filterResources('rapport')">Rapport</button>
+</div>
+
+<!-- (Optionnel) si tu veux ajouter le projet Semences d’Ici comme communication / rapport -->
+<div class="resource-card sytra rapport">
+  <p>
+    <span class="icon rapport-icon" title="Rapport">📑</span>
+    Sytra (2024). <em>Lancement du projet Semences d’Ici</em>. <a href="https://sytra.be/fr/publication/filiere-semences-dici/" target="_blank">Lien vers la page projet / rapport</a>
+  </p>
   <button class="badge-project" onclick="filterResources('sytra')">Sytra</button>
   <button class="badge-type" onclick="filterResources('rapport')">Rapport</button>
 </div>
@@ -85,18 +139,40 @@ form: false
   #filters button:hover {
     background-color: #0056b3;
   }
+
+  /* Icônes selon type */
+  .icon {
+    margin-right: 6px;
+  }
+  .article-icon { /* pour les articles */ }
+  .memoire-icon { /* pour les mémoires / thèses */ }
+  .rapport-icon { /* pour les rapports */ }
+
+  .badge-type { text-transform: capitalize; }
 </style>
 
 <!-- JS -->
 <script>
 function filterResources(filter) {
   const cards = document.querySelectorAll('.resource-card');
+  const searchTerm = document.getElementById('searchInput').value.toLowerCase().trim();
+
   cards.forEach(card => {
-    if (filter === 'all' || card.classList.contains(filter)) {
+    const matchesFilter = (filter === 'all' || card.classList.contains(filter));
+    const p = card.querySelector('p');
+    const text = p ? p.textContent.toLowerCase() : '';
+    const matchesSearch = (searchTerm === '' || text.includes(searchTerm));
+
+    if (matchesFilter && matchesSearch) {
       card.style.display = 'block';
     } else {
       card.style.display = 'none';
     }
   });
 }
+
+// Quand on tape dans la barre de recherche, on applique le filtre “all” + recherche mot-clé
+document.getElementById('searchInput').addEventListener('input', () => {
+  filterResources('all');
+});
 </script>
