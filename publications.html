@@ -10,22 +10,18 @@ form: false
   🎓 Cette section rassemble les <strong>articles scientifiques, thèses, mémoires et rapports</strong> issus de différents projets de recherches en lien avec le maraîchage en Wallonie, à partir de 2017.
 </div>
 
-<!-- Barre de recherche par mot-clé -->
-<div style="margin-bottom: 20px;">
-  <label for="searchInput"><strong>Rechercher un mot-clé :</strong></label><br>
-  <input type="text" id="searchInput" placeholder="Entrez un mot-clé..." style="padding: 6px; width: 100%; max-width: 400px; margin-top: 5px;">
-</div>
-
 <!-- Filtres -->
 <div id="filters" style="margin-bottom: 20px;">
-  <strong>Filtrer par THématique :</strong><br>
+  <strong>Filtrer par Thématique :</strong><br>
   <button onclick="filterResources('production')">Modes de production</button>
   <button onclick="filterResources('viabilite')">Viabilité économique</button>
   <button onclick="filterResources('travail')">Conditions de travail</button>
   <button onclick="filterResources('collectif')">Organisation collective</button>
   <button onclick="filterResources('logistique')">Logistique & circuits courts</button>
   <button onclick="filterResources('biodiversite')">Biodiversité</button>
+</div>
 
+<div id="filters" style="margin-bottom: 20px;">
   <strong>Filtrer par Auteur/Equipe de recherche :</strong><br>
   <button onclick="filterResources('all')">Tout afficher</button>
   <button onclick="filterResources('sytra')">Équipe Sytra</button>
@@ -44,7 +40,11 @@ form: false
   <button onclick="filterResources('thèse')">🎓Thèses</button> -->
 </div>
 
-
+<!-- Barre de recherche par mot-clé -->
+<div style="margin-bottom: 20px;">
+  <label for="searchInput"><strong>Rechercher un mot-clé :</strong></label><br>
+  <input type="text" id="searchInput" placeholder="Entrez un mot-clé..." style="padding: 6px; width: 100%; max-width: 400px; margin-top: 5px;">
+</div>
 
 <!-- Ressources -->
 
