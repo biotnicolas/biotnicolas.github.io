@@ -12,7 +12,7 @@ form: false
 
 <!-- Filtres -->
 
-<div class="filters-theme" style="margin-bottom: 20px;">
+<div id="filters" class="filters-theme" style="margin-bottom: 20px;">
   <strong>Filtrer par Thématique :</strong><br>
   <button onclick="filterResources('production')">Modes de production</button>
   <button onclick="filterResources('viabilite')">Viabilité économique</button>
@@ -22,7 +22,7 @@ form: false
   <button onclick="filterResources('biodiversite')">Biodiversité</button>
 </div>
 
-<div class="filters-project" style="margin-bottom: 20px;">
+<div id= "filters" class="filters-project" style="margin-bottom: 20px;">
   <strong>Filtrer par Auteur/Equipe de recherche :</strong><br>
   <button onclick="filterResources('all')">Tout afficher</button>
   <button onclick="filterResources('sytra')">Équipe Sytra</button>
@@ -320,24 +320,62 @@ form: false
     border-bottom: 1px solid #ddd;
   }
 
-  .badge-project, .badge-type , .badge-theme{
-    background-color: #2c3e50;
-    color: white;
-    padding: 4px 10px;
-    border-radius: 15px;
-    font-size: 0.85em;
-    font-weight: 500;
-    display: inline-block;
-    margin: 5px 5px 0 0;
-    border: none;
-    cursor: pointer;
-  }
+/* Badges pour thématiques */
+.badge-theme {
+  background-color: #28a745; /* vert */
+  color: white;
+  padding: 4px 10px;
+  border-radius: 15px;
+  font-size: 0.85em;
+  font-weight: 500;
+  display: inline-block;
+  margin: 5px 5px 0 0;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.badge-theme:hover {
+  background-color: #1e7e34; /* vert plus foncé */
+}
 
-  .badge-project:hover, .badge-type:hover, .badge-theme:hover {
-    background-color: #1a252f;
-  }
+/* Badges pour projets */
+.badge-project {
+  background-color: #007bff; /* bleu */
+  color: white;
+  padding: 4px 10px;
+  border-radius: 15px;
+  font-size: 0.85em;
+  font-weight: 500;
+  display: inline-block;
+  margin: 5px 5px 0 0;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.badge-project:hover {
+  background-color: #0056b3; /* bleu plus foncé */
+}
 
-  .filters-theme button {
+/* Badges pour types */
+.badge-type {
+  background-color: #17a2b8; /* cyan */
+  color: white;
+  padding: 4px 10px;
+  border-radius: 15px;
+  font-size: 0.85em;
+  font-weight: 500;
+  display: inline-block;
+  margin: 5px 5px 0 0;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.badge-type:hover {
+  background-color: #117a8b; /* cyan foncé */
+}
+
+/* Boutons filtres thématiques */
+.filters-theme button {
   background-color: #28a745; /* vert */
   color: white;
   margin: 5px 8px 10px 0;
@@ -345,12 +383,13 @@ form: false
   border-radius: 4px;
   border: none;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
-
 .filters-theme button:hover {
   background-color: #1e7e34;
 }
 
+/* Boutons filtres auteurs/projets */
 .filters-author button {
   background-color: #007bff; /* bleu */
   color: white;
@@ -359,8 +398,8 @@ form: false
   border-radius: 4px;
   border: none;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
-
 .filters-author button:hover {
   background-color: #0056b3;
 }
