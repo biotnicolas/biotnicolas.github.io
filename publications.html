@@ -11,7 +11,8 @@ form: false
 </div>
 
 <!-- Filtres -->
-<div id="filters" style="margin-bottom: 20px;">
+
+<div class="filters-theme" style="margin-bottom: 20px;">
   <strong>Filtrer par Thématique :</strong><br>
   <button onclick="filterResources('production')">Modes de production</button>
   <button onclick="filterResources('viabilite')">Viabilité économique</button>
@@ -21,7 +22,7 @@ form: false
   <button onclick="filterResources('biodiversite')">Biodiversité</button>
 </div>
 
-<div id="filters" style="margin-bottom: 20px;">
+<div class="filters-project" style="margin-bottom: 20px;">
   <strong>Filtrer par Auteur/Equipe de recherche :</strong><br>
   <button onclick="filterResources('all')">Tout afficher</button>
   <button onclick="filterResources('sytra')">Équipe Sytra</button>
@@ -336,19 +337,33 @@ form: false
     background-color: #1a252f;
   }
 
-  #filters button {
-    margin: 5px 8px 10px 0;
-    padding: 6px 12px;
-    border-radius: 4px;
-    border: none;
-    background-color: #007bff;
-    color: white;
-    cursor: pointer;
-  }
+  .filters-theme button {
+  background-color: #28a745; /* vert */
+  color: white;
+  margin: 5px 8px 10px 0;
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
 
-  #filters button:hover {
-    background-color: #0056b3;
-  }
+.filters-theme button:hover {
+  background-color: #1e7e34;
+}
+
+.filters-author button {
+  background-color: #007bff; /* bleu */
+  color: white;
+  margin: 5px 8px 10px 0;
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.filters-author button:hover {
+  background-color: #0056b3;
+}
 
   /* Icônes selon type */
   .icon {
