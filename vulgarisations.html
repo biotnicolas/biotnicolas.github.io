@@ -12,100 +12,145 @@ form: false
 
 
 <!-- Filtres -->
-<div id="filters" style="margin-bottom: 20px;">
-  <strong>Filtrer par projet :</strong><br>
-  <button onclick="filterResources('all')">Tout afficher</button>
-  <button onclick="filterResources('projet-nb')">Thèse Nicolas Biot</button>
-  <button onclick="filterResources('projet-ap')">Thèse Antoine Paris</button>
 
+<div id="filters" class="filters-theme" style="margin-bottom: 20px;">
+  <strong>Filtrer par Thématique :</strong><br>
+  <button onclick="filterResources('production')">Modes de production</button>
+  <button onclick="filterResources('viabilite')">Viabilité économique</button>
+  <button onclick="filterResources('travail')">Conditions de travail</button>
+  <button onclick="filterResources('collectif')">Organisation collective</button>
+  <button onclick="filterResources('logistique')">Logistique & circuits courts</button>
+  <button onclick="filterResources('biodiversite')">Biodiversité</button>
+</div>
+
+
+<div id="filters" class="filters-project" style="margin-bottom: 20px;">
+<strong>Filtrer par Auteur/Equipe de recherche :</strong><br>
+  <button onclick="filterResources('all')">Tout afficher</button>
+  <button onclick="filterResources('sytra')">Équipe Sytra</button>
+  <button onclick="filterResources('PEPA')">Équipe PEPA</button>
+  <button onclick="filterResources('projet-nb')">Thèse Nicolas Biot</button>
+  <button onclick="filterResources('projet-cc')">Thèse Céline Chevalier</button>
+  <button onclick="filterResources('projet-ad')">Thèse Antoinette Dumont</button>
+  <button onclick="filterResources('projet-ultratree')">Projet Ultra Tree</button>
+</div>
+<!-- Filtrer par type de document
   <br><br><strong>Filtrer par type :</strong><br>
   <button onclick="filterResources('video')">Vidéos</button>
-  <button onclick="filterResources('infographie')">Infographies (articles vulgarisés)</button>
+  <button onclick="filterResources('infographie')">Infographies (articles vulgarisés)</button>-->
+
+<!-- Barre de recherche par mot-clé -->
+<div style="margin-bottom: 20px;">
+  <label for="searchInput"><strong>Rechercher un mot-clé :</strong></label><br>
+  <input type="text" id="searchInput" placeholder="Entrez un mot-clé..." style="padding: 6px; width: 100%; max-width: 400px; margin-top: 5px;">
 </div>
 
 <!-- 🧾 Exemple : Vidéo 1-->
-<div class="resource-card projet-nb video">
+<div class="resource-card projet-nb video PEPA viabilite travail logistique">
     <div class="video-container">
   <iframe src="https://www.youtube.com/embed/N8A85kG3X8o?si=9gjREj1JVJAPsYOA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </div>
   <p class="tags">
+    <button class="badge-theme" onclick="filterResources('viabilite')">Viabilité</button>
+    <button class="badge-theme" onclick="filterResources('travail')">Conditions de travail</button>
+    <button class="badge-theme" onclick="filterResources('logistique')">Logistique & circuits courts</button>
     <button class="badge-project" onclick="filterResources('projet-nb')">Thèse Nicolas Biot</button>
+    <button class="badge-project" onclick="filterResources('PEPA')">Equipe PEPA</button>
     <button class="badge-type" onclick="filterResources('video')">Vidéo</button>
+
   </p>
 </div>
 
 <!-- 🧾 Exemple : Vidéo 2-->
-<div class="resource-card projet-nb video">
+<div class="resource-card projet-nb video viabilite PEPA">
   <div class="video-container">
   <iframe src="https://www.youtube.com/embed/YZJhL3vM2Yk?si=TTfuMw98psIBHJSM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </div>
   <p class="tags">
+    <button class="badge-theme" onclick="filterResources('viabilite')">Viabilité</button>
+    <button class="badge-project" onclick="filterResources('PEPA')">Equipe PEPA</button>
     <button class="badge-project" onclick="filterResources('projet-nb')">Thèse Nicolas Biot</button>
     <button class="badge-type" onclick="filterResources('video')">Vidéo</button>
   </p>
 </div>
 
 <!-- 🧾 Exemple : Vidéo 3-->
-<div class="resource-card projet-nb video">
+<div class="resource-card projet-nb video PEPA travail viabilite">
   <div class="video-container">
   <iframe src="https://www.youtube.com/embed/lK0sb8Co0Ms?si=35hy74VJ3ISSyc50" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </div>
   <p class="tags">
+    <button class="badge-theme" onclick="filterResources('viabilite')">Viabilité</button>
+    <button class="badge-theme" onclick="filterResources('travail')">Conditions de travail</button>
+    <button class="badge-project" onclick="filterResources('PEPA')">Equipe PEPA</button>    
     <button class="badge-project" onclick="filterResources('projet-nb')">Thèse Nicolas Biot</button>
     <button class="badge-type" onclick="filterResources('video')">Vidéo</button>
   </p>
 </div>
 
 <!-- 🧾 Exemple : Vidéo 4-->
-<div class="resource-card projet-nb video">
+<div class="resource-card projet-nb video viabilite PEPA">
    <div class="video-container">
   <iframe src="https://www.youtube.com/embed/Hbmd5f8prK4?si=y5EBC5Fqk7z4JTw2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </div>
   <p class="tags">
+    <button class="badge-theme" onclick="filterResources('viabilite')">Viabilité</button>
+    <button class="badge-project" onclick="filterResources('PEPA')">Equipe PEPA</button>
     <button class="badge-project" onclick="filterResources('projet-nb')">Thèse Nicolas Biot</button>
     <button class="badge-type" onclick="filterResources('video')">Vidéo</button>
   </p>
 </div>
 
 <!-- 🧾 Exemple : Vidéo 5-->
-<div class="resource-card projet-nb video">
+<div class="resource-card projet-nb video viabilite travail PEPA">
   <div class="video-container">
   <iframe src="https://www.youtube.com/embed/ZgX57xjllnA?si=_rZqFAUatkvmDFbv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </div>
   <p class="tags">
+    <button class="badge-theme" onclick="filterResources('travail')">Conditions de travail</button>
+    <button class="badge-theme" onclick="filterResources('viabilite')">Viabilité</button>
+    <button class="badge-project" onclick="filterResources('PEPA')">Equipe PEPA</button>
     <button class="badge-project" onclick="filterResources('projet-nb')">Thèse Nicolas Biot</button>
     <button class="badge-type" onclick="filterResources('video')">Vidéo</button>
   </p>
 </div>
 
 <!-- 🧾 Exemple : Vidéo 6-->
-<div class="resource-card projet-nb video">
+<div class="resource-card projet-nb video viabilite PEPA">
   <div class="video-container">
   <iframe src="https://www.youtube.com/embed/LLZS3_ma6J4?si=sjz_Co5izvmVPZBx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </div>
   <p class="tags">
+    <button class="badge-theme" onclick="filterResources('viabilite')">Viabilité</button>
+    <button class="badge-project" onclick="filterResources('PEPA')">Equipe PEPA</button>
     <button class="badge-project" onclick="filterResources('projet-nb')">Thèse Nicolas Biot</button>
     <button class="badge-type" onclick="filterResources('video')">Vidéo</button>
   </p>
 </div>
 
 <!-- 🧾 Exemple : Vidéo 7-->
-<div class="resource-card projet-nb video">
+<div class="resource-card projet-nb video logistique viabilite travail PEPA">
   <div class="video-container">
   <iframe src="https://www.youtube.com/embed/3OfSe-tEUZ8?si=_eCrvNEK_RGkepjM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </div>
   <p class="tags">
+    <button class="badge-theme" onclick="filterResources('viabilite')">Viabilité</button>
+    <button class="badge-theme" onclick="filterResources('travail')">Conditions de travail</button>
+    <button class="badge-theme" onclick="filterResources('logistique')">Logistique & circuits courts</button>
+    <button class="badge-project" onclick="filterResources('PEPA')">Equipe PEPA</button>
     <button class="badge-project" onclick="filterResources('projet-nb')">Thèse Nicolas Biot</button>
     <button class="badge-type" onclick="filterResources('video')">Vidéo</button>
   </p>
 </div>
 
 <!-- 🧾 Exemple : Vidéo 8-->
-<div class="resource-card projet-nb video">
+<div class="resource-card projet-nb video viabilite PEPA">
   <div class="video-container">
   <iframe src="https://www.youtube.com/embed/RBTYxZizrU8?si=a8m-IFfkc6L84Z-U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </div>
   <p class="tags">
+    <button class="badge-theme" onclick="filterResources('viabilite')">Viabilité</button>
+    <button class="badge-project" onclick="filterResources('PEPA')">Equipe PEPA</button>
     <button class="badge-project" onclick="filterResources('projet-nb')">Thèse Nicolas Biot</button>
     <button class="badge-type" onclick="filterResources('video')">Vidéo</button>
   </p>
@@ -114,31 +159,34 @@ form: false
 
 
 <!-- 🧾 Exemple : Infographie -->
-<div class="resource-card projet-nb infographie">
+<div class="resource-card projet-nb infographie viabilite production PEPA">
   <p><strong>🧾 Elaboration d'indicateurs pour évaluer la viabilité des fermes sur petites et moyennes surfaces</strong></p>
   
     <iframe 
-    src="/docs/Résumé_Heine_2025_fr.pdf#toolbar=1" 
+    src="{{ '/docs/Résumé_Heine_2025_fr.pdf#toolbar=1' | relative_url }}" 
     width="100%" 
     height="600px"
     style="border: 1px solid #ccc;">
   </iframe>
-
+    <button class="badge-theme" onclick="filterResources('viabilite')">Viabilité</button>
+    <button class="badge-theme" onclick="filterResources('production')">Modes de production</button>
+    <button class="badge-project" onclick="filterResources('PEPA')">Equipe PEPA</button>
     <button class="badge-project" onclick="filterResources('projet-nb')">Thèse Nicolas Biot</button>
     <button class="badge-type" onclick="filterResources('infographie')">Infographie</button>
   </p>
 </div>
 
-<div class="resource-card projet-nb infographie">
+<div class="resource-card projet-nb infographie travail PEPA">
   <p><strong>🧾 Conditions de travail en maraîchage: étude des points critiques et stratégies d’amélioriation</strong></p>
   
     <iframe 
-    src="/docs/Résumé_Peeters_2025_fr_nb_V2.pdf#toolbar=1" 
+    src="{{ '/docs/Résumé_Peeters_2025_fr_nb_V2.pdf#toolbar=1' | relative_url }}" 
     width="100%" 
     height="600px"
     style="border: 1px solid #ccc;">
   </iframe>
-
+    <button class="badge-theme" onclick="filterResources('travail')">Conditions de travail</button>
+    <button class="badge-project" onclick="filterResources('PEPA')">Equipe PEPA</button>
     <button class="badge-project" onclick="filterResources('projet-nb')">Thèse Nicolas Biot</button>
     <button class="badge-type" onclick="filterResources('infographie')">Infographie</button>
   </p>
@@ -170,52 +218,120 @@ form: false
     border-bottom: 1px solid #ddd;
   }
 
-  .badge-project, .badge-type {
-    background-color: #2c3e50;
-    color: white;
-    padding: 4px 10px;
-    border-radius: 15px;
-    font-size: 0.85em;
-    font-weight: 500;
-    display: inline-block;
-    margin: 5px 5px 0 0;
-    border: none;
-    cursor: pointer;
-  }
+  /* Badges pour thématiques */
+.badge-theme {
+  background-color: #4caf50; /* vert moyen plus doux */
+  color: white;
+  padding: 4px 10px;
+  border-radius: 15px;
+  font-size: 0.85em;
+  font-weight: 500;
+  display: inline-block;
+  margin: 5px 5px 0 0;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.badge-theme:hover {
+  background-color: #388e3c; /* vert foncé */
+}
 
-  .badge-project:hover, .badge-type:hover {
-    background-color: #1a252f;
-  }
+/* Badges pour projets */
+.badge-project {
+  background-color: #5a9bd8; /* bleu plus doux */
+  color: white;
+  padding: 4px 10px;
+  border-radius: 15px;
+  font-size: 0.85em;
+  font-weight: 500;
+  display: inline-block;
+  margin: 5px 5px 0 0;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.badge-project:hover {
+  background-color: #3a78c0; /* bleu foncé */
+}
 
-  #filters button {
-    margin: 5px 8px 10px 0;
-    padding: 6px 12px;
-    border-radius: 4px;
-    border: none;
-    background-color: #007bff;
-    color: white;
-    cursor: pointer;
-  }
+/* Badges pour types (plus sobre) */
+.badge-type {
+  background-color: #6c757d; /* gris sobre */
+  color: white;
+  padding: 4px 10px;
+  border-radius: 15px;
+  font-size: 0.85em;
+  font-weight: 500;
+  display: inline-block;
+  margin: 5px 5px 0 0;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.badge-type:hover {
+  background-color: #5a6268; /* gris plus foncé */
+}
 
-  #filters button:hover {
-    background-color: #0056b3;
-  }
+/* Boutons filtres thématiques */
+.filters-theme button {
+  background-color: #4caf50; /* vert moyen */
+  color: white;
+  margin: 5px 8px 10px 0;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+.filters-theme button:hover {
+  background-color: #388e3c;
+}
+
+/* Boutons filtres projets/auteurs */
+.filters-project button {
+  background-color: #5a9bd8; /* bleu plus doux */
+  color: white;
+  margin: 5px 8px 10px 0;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+.filters-project button:hover {
+  background-color: #3a78c0;
+}
 </style>
 
 <!-- 🧠 JS pour le filtre -->
+ 
 <script>
 function filterResources(filter) {
   const cards = document.querySelectorAll('.resource-card');
+  const searchTerm = document.getElementById('searchInput').value.toLowerCase().trim();
 
   cards.forEach(card => {
-    if (filter === 'all' || card.classList.contains(filter)) {
+    const matchesFilter = (filter === 'all' || card.classList.contains(filter));
+    const p = card.querySelector('p');
+    const text = p ? p.textContent.toLowerCase() : '';
+    const matchesSearch = (searchTerm === '' || text.includes(searchTerm));
+
+    if (matchesFilter && matchesSearch) {
       card.style.display = 'block';
     } else {
       card.style.display = 'none';
     }
   });
 }
+
+// Quand on tape dans la barre de recherche, on applique le filtre “all” + recherche mot-clé
+document.getElementById('searchInput').addEventListener('input', () => {
+  filterResources('all');
+});
 </script>
+
 
 
 
