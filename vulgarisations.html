@@ -33,6 +33,7 @@ form: false
   <button onclick="filterResources('projet-cc')">Thèse Céline Chevalier</button>
   <button onclick="filterResources('projet-ad')">Thèse Antoinette Dumont</button>
   <button onclick="filterResources('projet-ultratree')">Projet Ultra Tree</button>
+  <button onclick="filterResources('projet-spincoop')">Projet SPINCOOP</button>
 </div>
 <!-- Filtrer par type de document
   <br><br><strong>Filtrer par type :</strong><br>
@@ -156,7 +157,59 @@ form: false
   </p>
 </div>
 
+<!-- 🧾 Vidéo SPINCOOP travail du sol-->
+<div class="resource-card projet-spincoop video production biodiveriste">
+  <div class="video-container">
+  <iframe src="https://youtu.be/e2GjmqEixkU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+  <p class="tags">
+    <button class="badge-theme" onclick="filterResources('biodiversite')">Biodiversité</button>
+    <button class="badge-theme" onclick="filterResources('production')">Modes de production</button>
+    <button class="badge-project" onclick="filterResources('projet-spincoop')">Projet SPINCOOP</button>
+    <button class="badge-type" onclick="filterResources('video')">Vidéo</button>
+  </p>
+</div>
 
+<!-- 🧾 Vidéo SPINCOOP Implantation-->
+
+<div class="resource-card projet-spincoop video production">
+  <div class="video-container">
+  <iframe src="https://youtu.be/wg9E1I_3B04" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+  <p class="tags">
+    <button class="badge-theme" onclick="filterResources('production')">Modes de production</button>
+    <button class="badge-project" onclick="filterResources('projet-spincoop')">Projet SPINCOOP</button>
+    <button class="badge-type" onclick="filterResources('video')">Vidéo</button>
+  </p>
+</div>
+
+<!-- 🧾 Vidéo SPINCOOP Récolte-->
+
+<div class="resource-card projet-spincoop video production">
+  <div class="video-container">
+  <iframe src="https://youtu.be/DVqWNIITx64" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+  <p class="tags">
+    <button class="badge-theme" onclick="filterResources('production')">Modes de production</button>
+    <button class="badge-project" onclick="filterResources('projet-spincoop')">Projet SPINCOOP</button>
+    <button class="badge-type" onclick="filterResources('video')">Vidéo</button>
+  </p>
+</div>
+
+<!-- 🧾 Vidéo SPINCOOP Plan de culture-->
+
+<div class="resource-card projet-spincoop video production logistique biodiversite">
+  <div class="video-container">
+  <iframe src="https://youtu.be/B_fUneve9GE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+  <p class="tags">
+    <button class="badge-theme" onclick="filterResources('production')">Modes de production</button>
+    <button class="badge-theme" onclick="filterResources('biodiversite')">Biodiversité</button>
+    <button class="badge-theme" onclick="filterResources('logistique')">Logistique & circuits courts</button>
+    <button class="badge-project" onclick="filterResources('projet-spincoop')">Projet SPINCOOP</button>
+    <button class="badge-type" onclick="filterResources('video')">Vidéo</button>
+  </p>
+</div>
 
 <!-- 🧾 Exemple : Infographie -->
 <div class="resource-card projet-nb infographie viabilite production PEPA">
@@ -196,7 +249,7 @@ form: false
 
 <div class="resource-card infographie travail projet-ultratree viabilite travail">
   <p><strong>🧾 Boussole de la vivailité</strong>. Plus d'informations sur le projet sur le site:<a href="https://www.cocreate.brussels/projet/ultratree/resultat-de-la-recherche/" target="_blank" rel="noopener noreferrer">
-    cocreate.brussels</a>.</p>
+    Ultra Tree</a>.</p>
   
     <iframe 
     src="{{ '/docs/la_boussole_de_vivabilite.pdf#toolbar=1' | relative_url }}" 
@@ -212,7 +265,7 @@ form: false
 
 <div class="resource-card infographie projet-ultratree viabilite travail production logistique">
   <p><strong>🧾 Guide de bonnes pratiques en maraîchage agroécologique professionnel sur petites surfaces en zones (péri-)urbaines</strong>. Plus d'informations sur le projet sur le site:<a href="https://www.cocreate.brussels/projet/ultratree/resultat-de-la-recherche/" target="_blank" rel="noopener noreferrer">
-    cocreate.brussels</a>.</p>  
+    Ultra Tree</a>.</p>  
     <iframe 
     src="{{ '/docs/Guide_de_bonnes_pratiques.pdf#toolbar=1' | relative_url }}" 
     width="100%" 
@@ -229,7 +282,7 @@ form: false
 
 <div class="resource-card infographie projet-ultratree viabilite logistique">
   <p><strong>🧾 Analyse du potentiel de la vente directe en maraîchage selon différents types de systèmes d’abonnement</strong>. Plus d'informations sur le projet sur le site:<a href="https://www.cocreate.brussels/projet/ultratree/resultat-de-la-recherche/" target="_blank" rel="noopener noreferrer">
-    cocreate.brussels</a>.</p>
+    Ultra Tree</a>.</p>
     <iframe 
     src="{{ '/docs/Pententiel_vente_directe.pdf#toolbar=1' | relative_url }}" 
     width="100%" 
@@ -242,9 +295,9 @@ form: false
     <button class="badge-theme" onclick="filterResources('logistique')">Logistique & circuits courts</button>
 </div>
 
-<div class="resource-card infographie projet-ultratree biodiversite">
+<div class="resource-card infographie projet-ultratree biodiversite projet-spincoop">
   <p><strong>🧾 Guide d’observation et pistes d’action pour des sols vivants en maraîchage</strong>. Pour accéder aux fiches supplémentaires, voir sur le site : <a href="https://www.cocreate.brussels/projet/ultratree/resultat-de-la-recherche/" target="_blank" rel="noopener noreferrer">
-    cocreate.brussels</a>.</p>
+    Ultra Tree</a>.</p>
   
     <iframe 
     src="{{ '/docs/Kit_sol_intro.pdf#toolbar=1' | relative_url }}" 
@@ -254,8 +307,63 @@ form: false
   </iframe>
     <button class="badge-theme" onclick="filterResources('biodiversite')">Biodiversité</button>
     <button class="badge-project" onclick="filterResources('projet-ultratree')">Projet Ultra Tree</button>
+    <button class="badge-project" onclick="filterResources('projet-spincoop')">Projet SPINCOOP</button>
     <button class="badge-type" onclick="filterResources('infographie')">Fiche de synthèse</button>
 </div>
+
+<div class="resource-card infographie projet-spincoop collectif production logistique">
+  <p><strong>🧾 Co-opérer au stade de la production. Enjeux et recueil d’expériences pour de nouveaux modèles agricoles</strong>. Pour plus d'informations sur le projet SPINCOOP et ses résultats : <a href="https://www.cocreate.brussels/projet/spincoop/resultats-de-recherche/" target="_blank" rel="noopener noreferrer">
+    SPINCOOP</a>.</p>
+  
+    <iframe 
+    src="{{ '/docs/cooperer_production.pdf#toolbar=1' | relative_url }}" 
+    width="100%" 
+    height="600px"
+    style="border: 1px solid #ccc;">
+  </iframe>
+    <button class="badge-theme" onclick="filterResources('collectif')">Organisation collective</button>
+    <button class="badge-theme" onclick="filterResources('production')">Modes de production</button>
+    <button class="badge-theme" onclick="filterResources('logistique')">Logistique é circuits courts</button>
+    <button class="badge-project" onclick="filterResources('projet-spincoop')">Projet SPINCOOP</button>
+    <button class="badge-type" onclick="filterResources('infographie')">Fiche de synthèse</button>
+</div>
+
+
+<div class="resource-card infographie projet-spincoop production viabilite">
+  <p><strong>🧾 Faciliter l’accès à la terre. Cultiver sur petites surfaces et sur plusieurs sites</strong>. Pour plus d'informations sur le projet SPINCOOP et ses résultats : <a href="https://www.cocreate.brussels/projet/spincoop/resultats-de-recherche/" target="_blank" rel="noopener noreferrer">
+    SPINCOOP</a>.</p>
+
+    <iframe 
+    src="{{ '/docs/acces_terre.pdf#toolbar=1' | relative_url }}" 
+    width="100%" 
+    height="600px"
+    style="border: 1px solid #ccc;">
+  </iframe>
+    <button class="badge-theme" onclick="filterResources('production')">Modes de production</button>
+    <button class="badge-theme" onclick="filterResources('viabilite')">Viabilité</button>
+    <button class="badge-project" onclick="filterResources('projet-spincoop')">Projet SPINCOOP</button>
+    <button class="badge-type" onclick="filterResources('infographie')">Fiche de synthèse</button>
+</div>
+
+
+<div class="resource-card infographie projet-spincoop production viabilite">
+  <p><strong>🧾 Référentiel Technico Economique en Spin Farming</strong>. Pour plus d'informations sur le projet SPINCOOP et ses résultats : <a href="https://www.cocreate.brussels/projet/spincoop/resultats-de-recherche/" target="_blank" rel="noopener noreferrer">
+    SPINCOOP</a>.</p>
+
+    <iframe 
+    src="{{ '/docs/referentiel_technico_spin.pdf#toolbar=1' | relative_url }}" 
+    width="100%" 
+    height="600px"
+    style="border: 1px solid #ccc;">
+  </iframe>
+    <button class="badge-theme" onclick="filterResources('production')">Modes de production</button>
+    <button class="badge-theme" onclick="filterResources('viabilite')">Viabilité</button>
+    <button class="badge-project" onclick="filterResources('projet-spincoop')">Projet SPINCOOP</button>
+    <button class="badge-type" onclick="filterResources('infographie')">Fiche de synthèse</button>
+</div>
+
+
+
 
 
 <!-- 🎨 CSS -->
