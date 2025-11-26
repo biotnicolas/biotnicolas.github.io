@@ -31,6 +31,8 @@ form: false
   <button onclick="filterResources('projet-cc')">Thèse Céline Chevalier</button>
   <button onclick="filterResources('projet-ad')">Thèse Antoinette Dumont</button>
   <button onclick="filterResources('projet-ultratree')">Projet Ultra Tree</button>
+  <button onclick="filterResources('projet-spincoop')">Projet SPINCOOP</button>
+
 
   <!-- Pour filtrer par type de document
 
@@ -48,6 +50,26 @@ form: false
 </div>
 
 <!-- Ressources -->
+
+<!-- Article Maughan et al. (2021) -->
+<div class="resource-card projet-ad article sytra production logistique territoire">
+  <p>
+    <span class="icon article-icon" title="Article">📄</span>
+    <strong>Maughan, N., Pipart, N., Van Dyck, B., & Visser, M. (2021).</strong> 
+    The potential of bio-intensive market gardening models for a transformative urban agriculture: Adapting SPIN Farming to Brussels. 
+    In <em>Resourcing an Agroecological Urbanism – Political, Transformational and Territorial Dimensions</em>, Chapter 7. 
+    Routledge Studies in Food, Society and Environment. 
+    <a href="https://pureportal.coventry.ac.uk/en/publications/the-potential-of-bio-intensive-market-gardening-models-for-a-tran/" 
+       target="_blank">Lien vers l'article</a>
+  </p>
+  <!-- Thématiques -->
+  <button class="badge-theme" onclick="filterResources('production')">Modes de production</button>
+  <button class="badge-theme" onclick="filterResources('viabilite')">Viabilité</button>
+  <!-- Projets -->
+  <button class="badge-project" onclick="filterResources('projet-spincoop')">Projet SPINCOOP</button>
+  <!-- Type -->
+  <button class="badge-type" onclick="filterResources('article')">Article</button>
+</div>
 
 <!-- Exemple : Article(s) / Mémoire(s) que tu avais déjà -->
 <div class="resource-card projet-nb article PEPA viabilite production">
@@ -75,9 +97,12 @@ form: false
   <button class="badge-project" onclick="filterResources('projet-nb')">Thèse Nicolas Biot</button>
   <button class="badge-project" onclick="filterResources('PEPA')">Equipe PEPA</button>
   <button class="badge-type" onclick="filterResources('article')">Article</button>
+
   
 </div>
 
+
+<!-- Mémoire Benjamin -->
 <div class="resource-card projet-nb memoire PEPA viabilite production">
   <p>
     <span class="icon memoire-icon" title="Mémoire">📘</span>
@@ -101,8 +126,6 @@ form: false
       Lien vers le rapport
     </a>
   </p>
-  
-  <!-- Badges -->
   <button class="badge-theme" onclick="filterResources('production')">Modes de production</button>
   <button class="badge-type" onclick="filterResources('rapport')">Rapport</button>
 </div>
