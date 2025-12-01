@@ -29,6 +29,7 @@ form: false
   <button onclick="filterResources('all')">Tout afficher</button>
   <button onclick="filterResources('sytra')">Équipe Sytra</button>
   <button onclick="filterResources('PEPA')">Équipe PEPA</button>
+  <button onclick="filterResources('LPTransition')">Équipe LPTransition</button>
   <button onclick="filterResources('projet-nb')">Thèse Nicolas Biot</button>
   <button onclick="filterResources('projet-cc')">Thèse Céline Chevalier</button>
   <button onclick="filterResources('projet-ad')">Thèse Antoinette Dumont</button>
@@ -264,9 +265,26 @@ form: false
 <!-- 🧾 Exemple : Rapports vulgarisés -->
 
 
+<!-- Rapport Genappe -->
 
+<div class="resource-card rapport qualite-de-vie projet-ultratree">
+  <p>
+    <strong>🧾 Enquête sur la qualité de vie des exploitants agricoles et forestiers à Genappe</strong>.  
+    Rapport final réalisé en 2023.  
+    <em>LPTransition (UCLouvain) & Innovons.</em><br>
+    Auteurs : Équipe du laboratoire LPTransition de l’UCLouvain et société Innovons.  
+  </p>
 
-
+  <iframe
+    src="{{ '/docs/qualite_vie.pdf#toolbar=1' | relative_url }}"
+    width="100%"
+    height="600px"
+    style="border: 1px solid #ccc;">
+  </iframe>
+  <button class="badge-theme" onclick="filterResources('travail')">Conditions de travail </button>
+  <button class="badge-project" onclick="filterResources('LPTransition')">Equipe LPTransition </button>
+  <button class="badge-type" onclick="filterResources('rapport')">Fiche de synthèse</button>
+</div>
 
 
 <!-- Synthèse MSV (Itinéraires Bio 37) -->
