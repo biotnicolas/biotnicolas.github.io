@@ -17,6 +17,7 @@ form: false
 
 <div id="filters" class="filters-theme" style="margin-bottom: 20px;">
   <strong>Filtrer par Thématique :</strong><br>
+  <button onclick="filterResources('all')">Tout afficher</button>
   <button onclick="filterResources('production')">Modes de production</button>
   <button onclick="filterResources('viabilite')">Viabilité économique</button>
   <button onclick="filterResources('travail')">Conditions de travail</button>
@@ -27,6 +28,7 @@ form: false
 
 <div id="filters" class="filters-team" style="margin-bottom: 20px;">
   <strong>Filtrer par Equipe de recherche :</strong><br>
+  <button onclick="filterResources('all')">Tout afficher</button>
   <button onclick="filterResources('sytra')">Équipe Sytra</button>
   <button onclick="filterResources('PEPA')">Équipe PEPA</button>
   <button onclick="filterResources('AELab')">AgroEcology Lab</button>
@@ -508,6 +510,21 @@ form: false
   background-color: #5a6268; /* gris plus foncé */
 }
 
+/* Boutons filtres thématiques */
+.filters-all button {
+  background-color: #818682; /* vert moyen */
+  color: white;
+  margin: 5px 8px 10px 0;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+.filters-all button:hover {
+  background-color: #545855;
+}
 
 /* Boutons filtres thématiques */
 .filters-theme button {
