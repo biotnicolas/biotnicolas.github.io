@@ -14,6 +14,7 @@ form: false
 
 <div id="filters" class="filters-theme" style="margin-bottom: 20px;">
   <strong>Filtrer par Thématique :</strong><br>
+  <button onclick="filterResources('all')">Tout afficher</button>
   <button onclick="filterResources('production')">Modes de production</button>
   <button onclick="filterResources('viabilite')">Viabilité économique</button>
   <button onclick="filterResources('travail')">Conditions de travail</button>
@@ -22,12 +23,16 @@ form: false
   <button onclick="filterResources('biodiversite')">Biodiversité</button>
 </div>
 
-<div id= "filters" class="filters-project" style="margin-bottom: 20px;">
-  <strong>Filtrer par Auteur/Equipe de recherche :</strong><br>
+<div id="filters" class="filters-team" style="margin-bottom: 20px;">
+  <strong>Filtrer par Equipe de recherche :</strong><br>
   <button onclick="filterResources('all')">Tout afficher</button>
   <button onclick="filterResources('sytra')">Équipe Sytra</button>
   <button onclick="filterResources('PEPA')">Équipe PEPA</button>
   <button onclick="filterResources('AELab')">AgroEcology Lab</button>
+</div>
+
+<div id= "filters" class="filters-project" style="margin-bottom: 20px;">
+  <strong>Filtrer par Projet :</strong><br>
   <button onclick="filterResources('projet-nb')">Thèse Nicolas Biot</button>
   <button onclick="filterResources('projet-cc')">Thèse Céline Chevalier</button>
   <button onclick="filterResources('projet-ad')">Thèse Antoinette Dumont</button>
@@ -71,7 +76,7 @@ form: false
   <button class="badge-theme" onclick="filterResources('viabilite')">Viabilité</button>
   <!-- Projets -->
   <button class="badge-project" onclick="filterResources('projet-spincoop')">Projet SPINCOOP</button>
-  <button class="badge-project" onclick="filterResources('AELab')">AgroEcology Lab</button>
+  <button class="badge-team" onclick="filterResources('AELab')">AgroEcology Lab</button>
 
   <!-- Type -->
   <button class="badge-type" onclick="filterResources('article')">Article</button>
@@ -95,7 +100,7 @@ form: false
   <button class="badge-theme" onclick="filterResources('viabilite')">Viabilité</button>
   <!-- Projets -->
   <button class="badge-project" onclick="filterResources('projet-spincoop')">Projet SPINCOOP</button>
-  <button class="badge-project" onclick="filterResources('AELab')">AgroEcology Lab</button>
+  <button class="badge-team" onclick="filterResources('AELab')">AgroEcology Lab</button>
   <!-- Type -->
   <button class="badge-type" onclick="filterResources('article')">Article</button>
 </div>
@@ -108,7 +113,7 @@ form: false
   </p>
   <button class="badge-theme" onclick="filterResources('viabilite')">Viabilité</button>
   <button class="badge-theme" onclick="filterResources('production')">Modes de production</button>
-  <button class="badge-project" onclick="filterResources('PEPA')">Equipe PEPA</button>
+  <button class="badge-team" onclick="filterResources('PEPA')">Equipe PEPA</button>
   <button class="badge-project" onclick="filterResources('projet-nb')">Thèse Nicolas Biot</button>
   <button class="badge-type" onclick="filterResources('article')">Article</button>
 </div>
@@ -124,7 +129,7 @@ form: false
   <button class="badge-theme" onclick="filterResources('production')">Modes de production</button>
   <button class="badge-theme" onclick="filterResources('travail')">Conditions de travail</button>
   <button class="badge-project" onclick="filterResources('projet-nb')">Thèse Nicolas Biot</button>
-  <button class="badge-project" onclick="filterResources('PEPA')">Equipe PEPA</button>
+  <button class="badge-team" onclick="filterResources('PEPA')">Equipe PEPA</button>
   <button class="badge-type" onclick="filterResources('article')">Article</button>
 
   
@@ -140,7 +145,7 @@ form: false
   <button class="badge-theme" onclick="filterResources('viabilite')">Viabilité</button>
   <button class="badge-theme" onclick="filterResources('production')">Modes de production</button>
   <button class="badge-project" onclick="filterResources('projet-nb')">Thèse Nicolas Biot</button>
-  <button class="badge-project" onclick="filterResources('PEPA')">Equipe PEPA</button>
+  <button class="badge-team" onclick="filterResources('PEPA')">Equipe PEPA</button>
   <button class="badge-type" onclick="filterResources('memoire')">Mémoire</button>
 </div>
 
@@ -157,7 +162,7 @@ form: false
   </p>
   <button class="badge-theme" onclick="filterResources('production')">Modes de production</button>
   <button class="badge-type" onclick="filterResources('rapport')">Rapport</button>
-  <button class="badge-project" onclick="filterResources('AELab')">AgroEcology Lab</button>
+  <button class="badge-team" onclick="filterResources('AELab')">AgroEcology Lab</button>
 </div>
 
 <!-- Mémoire - Augustin Peeters -->
@@ -169,7 +174,7 @@ form: false
   </p>
   <button class="badge-theme" onclick="filterResources('travail')">Conditions de travail</button>
   <button class="badge-project" onclick="filterResources('projet-nb')">Thèse Nicolas Biot</button>
-  <button class="badge-project" onclick="filterResources('PEPA')">Equipe PEPA</button>
+  <button class="badge-team" onclick="filterResources('PEPA')">Equipe PEPA</button>
   <button class="badge-type" onclick="filterResources('memoire')">Mémoire</button>
 </div>
 
@@ -183,7 +188,7 @@ form: false
   <button class="badge-theme" onclick="filterResources('collectif')">Organisation collective</button>
   <button class="badge-theme" onclick="filterResources('logistique')">Logistique & circuits courts</button>
   <button class="badge-project" onclick="filterResources('projet-nb')">Thèse Nicolas Biot</button>
-  <button class="badge-project" onclick="filterResources('PEPA')">Equipe PEPA</button>
+  <button class="badge-team" onclick="filterResources('PEPA')">Equipe PEPA</button>
   <button class="badge-type" onclick="filterResources('memoire')">Mémoire</button>
 </div>
 
@@ -196,7 +201,7 @@ form: false
   </p>
   <button class="badge-theme" onclick="filterResources('logistique')">Logistique & circuits courts</button>
   <button class="badge-project" onclick="filterResources('projet-nb')">Thèse Nicolas Biot</button>
-  <button class="badge-project" onclick="filterResources('PEPA')">Equipe PEPA</button>
+  <button class="badge-team" onclick="filterResources('PEPA')">Equipe PEPA</button>
   <button class="badge-type" onclick="filterResources('memoire')">Mémoire</button>
 </div>
 
@@ -210,8 +215,8 @@ form: false
   <button class="badge-theme" onclick="filterResources('production')">Modes de production</button>
   <button class="badge-theme" onclick="filterResources('biodiversite')">Biodiversité</button>
   <button class="badge-project" onclick="filterResources('projet-cc')">Thèse Céline Chevalier</button>
-  <button class="badge-project" onclick="filterResources('sytra')">Equipe Sytra</button>
-  <button class="badge-project" onclick="filterResources('PEPA')">Equipe PEPA</button>
+  <button class="badge-team" onclick="filterResources('sytra')">Equipe Sytra</button>
+  <button class="badge-team" onclick="filterResources('PEPA')">Equipe PEPA</button>
   <button class="badge-type" onclick="filterResources('thèse')">Thèse</button>
 </div>
 
@@ -222,7 +227,7 @@ form: false
     <strong>Riera, A., Antier, C., & Baret, P. (2020).</strong> <em>État des lieux et scénarios à horizon 2050 de la filière légumière en Région wallonne</em>. Sytra. <a href="https://sytra.be/publication/vegetable-sector-wallonia/" target="_blank">Lien vers le rapport</a>
   </p>
   <button class="badge-theme" onclick="filterResources('production')">Modes de production</button>
-  <button class="badge-project" onclick="filterResources('sytra')">Sytra</button>
+  <button class="badge-team" onclick="filterResources('sytra')">Sytra</button>
   <button class="badge-type" onclick="filterResources('rapport')">Rapport</button>
 </div>
 
@@ -237,7 +242,7 @@ form: false
   <button class="badge-theme" onclick="filterResources('production')">Modes de production</button>
   <button class="badge-theme" onclick="filterResources('travail')">Conditions de travail</button>
   <button class="badge-project" onclick="filterResources('projet-ad')">Thèse Antoinette Dumont</button>
-  <button class="badge-project" onclick="filterResources('sytra')">Sytra</button>
+  <button class="badge-team" onclick="filterResources('sytra')">Sytra</button>
   <button class="badge-type" onclick="filterResources('thèse')">Thèse</button>
 </div>
 
@@ -252,7 +257,7 @@ form: false
   <button class="badge-theme" onclick="filterResources('production')">Modes de production</button>
   <button class="badge-theme" onclick="filterResources('travail')">Conditions de travail</button>
   <button class="badge-project" onclick="filterResources('projet-ad')">Thèse Antoinette Dumont</button>
-  <button class="badge-project" onclick="filterResources('sytra')">Sytra</button>
+  <button class="badge-team" onclick="filterResources('sytra')">Sytra</button>
   <button class="badge-type" onclick="filterResources('article')">Article</button>
 </div>
 
@@ -265,7 +270,7 @@ form: false
   <button class="badge-theme" onclick="filterResources('logistique')">Logistique & circuits courts</button>
   <button class="badge-theme" onclick="filterResources('production')">Modes de production</button>
   <button class="badge-project" onclick="filterResources('projet-ad')">Thèse Antoinette Dumont</button>
-  <button class="badge-project" onclick="filterResources('sytra')">Sytra</button>
+  <button class="badge-team" onclick="filterResources('sytra')">Sytra</button>
   <button class="badge-type" onclick="filterResources('article')">Article</button>
 </div>
 
@@ -277,7 +282,7 @@ form: false
   </p>
   <button class="badge-theme" onclick="filterResources('production')">Modes de production</button>
   <button class="badge-theme" onclick="filterResources('biodiversite')">Biodiversité</button>
-  <button class="badge-project" onclick="filterResources('sytra')">Sytra</button>
+  <button class="badge-team" onclick="filterResources('sytra')">Sytra</button>
   <button class="badge-type" onclick="filterResources('rapport')">Rapport</button>
 </div>
 
@@ -291,7 +296,7 @@ form: false
   <button class="badge-theme" onclick="filterResources('travail')">Conditions de travail</button>
   <button class="badge-theme" onclick="filterResources('collectif')">Organisation collective</button>
   <button class="badge-project" onclick="filterResources('projet-ultratree')">Projet Ultra Tree</button>
-  <button class="badge-project" onclick="filterResources('AELab')">AgroEcology Lab</button>
+  <button class="badge-team" onclick="filterResources('AELab')">AgroEcology Lab</button>
   <button class="badge-type" onclick="filterResources('article')">Article</button>
 </div>
 
@@ -303,7 +308,7 @@ form: false
   </p>
   <button class="badge-theme" onclick="filterResources('viabilite')">Viabilité</button>
   <button class="badge-theme" onclick="filterResources('travail')">Conditions de travail</button>
-  <button class="badge-project" onclick="filterResources('AELab')">AgroEcology Lab</button>
+  <button class="badge-team" onclick="filterResources('AELab')">AgroEcology Lab</button>
   <button class="badge-type" onclick="filterResources('article')">Article</button>
 </div>
 
@@ -338,7 +343,7 @@ form: false
   </p>
   <button class="badge-theme" onclick="filterResources('collectif')">Organisation collective</button>
   <button class="badge-theme" onclick="filterResources('travail')">Conditions de travail</button>
-  <button class="badge-project" onclick="filterResources('sytra')">Sytra</button>
+  <button class="badge-team" onclick="filterResources('sytra')">Sytra</button>
   <button class="badge-type" onclick="filterResources('mémoire')">Mémoire</button>
 </div>
 
@@ -389,7 +394,7 @@ form: false
     <strong>Hanssen, G. (2025).</strong> Quantification de l’impact d’une irrigation par oyas sur le développement foliaire et racinaire du chou en conditions de stress hydrique en Wallonie.
     <a href="https://hdl.handle.net/2078.2/44717" target="_blank">Lien vers le mémoire complet</a>
   </p>
-  <button class="badge-project" onclick="filterResources('PEPA')">Equipe PEPA</button>
+  <button class="badge-team" onclick="filterResources('PEPA')">Equipe PEPA</button>
   <button class="badge-type" onclick="filterResources('memoire')">Mémoire</button>
   <button class="badge-type" onclick="filterResources('production')">Modes de production</button>
 
@@ -403,7 +408,7 @@ form: false
     <strong>Vas, E. (2025).</strong> Étude de l’impact du paillage (« mulch ») sur la santé des sols, le développement des légumes et la gestion des adventices dans un contexte de maraîchage biologique sur petite surface en Belgique.
     <a href="https://hdl.handle.net/2078.2/44712" target="_blank">Lien vers le mémoire complet</a>
   </p>
-  <button class="badge-project" onclick="filterResources('PEPA')">Equipe PEPA</button>
+  <button class="badge-team" onclick="filterResources('PEPA')">Equipe PEPA</button>
   <button class="badge-type" onclick="filterResources('memoire')">Mémoire</button>
   <button class="badge-type" onclick="filterResources('production')">Modes de production</button>
 
@@ -416,7 +421,7 @@ form: false
     <strong>Lucca, C. (2024).</strong> Impact de différentes stratégies d'irrigation en champ sur le rendement et ses composantes chez la tomate (Solanum lycopersicum L.)
     <a href="https://thesis.dial.uclouvain.be/entities/masterthesis/d8f41b6a-b185-4165-b606-175c540cce42" target="_blank">Lien vers le mémoire complet</a>
   </p>
-  <button class="badge-project" onclick="filterResources('PEPA')">Equipe PEPA</button>
+  <button class="badge-team" onclick="filterResources('PEPA')">Equipe PEPA</button>
   <button class="badge-type" onclick="filterResources('memoire')">Mémoire</button>
   <button class="badge-type" onclick="filterResources('production')">Modes de production</button>
 </div>
@@ -446,6 +451,24 @@ form: false
 }
 .badge-theme:hover {
   background-color: #388e3c; /* vert foncé */
+}
+
+/* Badges pour team */
+.badge-team {
+  background-color: #d48a4c; /* bleu plus doux */
+  color: white;
+  padding: 4px 10px;
+  border-radius: 15px;
+  font-size: 0.85em;
+  font-weight: 500;
+  display: inline-block;
+  margin: 5px 5px 0 0;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.badge-team:hover {
+  background-color: #b86f32; /* bleu foncé */
 }
 
 /* Badges pour projets */
@@ -500,7 +523,23 @@ form: false
   background-color: #388e3c;
 }
 
-/* Boutons filtres projets/auteurs */
+/* Boutons filtres teams */
+.filters-team button {
+  background-color: #d48a4c; /* vert moyen */
+  color: white;
+  margin: 5px 8px 10px 0;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+.filters-team button:hover {
+  background-color: #b86f32;
+}
+
+/* Boutons filtres projets */
 .filters-project button {
   background-color: #5a9bd8; /* bleu plus doux */
   color: white;
