@@ -25,6 +25,8 @@ form: false
   <button onclick="filterResources('logistique')">Logistique & circuits courts</button>
   <button onclick="filterResources('biodiversite')">Biodiversité</button>
 </div>
+<div id="filter-description" class="filter-description"></div>
+
 
 <div id="filters" class="filters-team" style="margin-bottom: 20px;">
   <strong>Filtrer par Equipe de recherche :</strong><br>
@@ -582,6 +584,16 @@ form: false
   background-color: #3a78c0;
 }
 
+/* Description des projets */
+
+.filter-description {
+  margin-top: 15px;
+  padding: 10px 15px;
+  background: #f2f2f2;
+  border-left: 4px solid #4CAF50;
+  font-style: italic;
+}
+
   /* Icônes selon type */
   .icon {
     margin-right: 6px;
@@ -598,6 +610,31 @@ form: false
 function filterResources(filter) {
   const cards = document.querySelectorAll('.resource-card');
   const searchTerm = document.getElementById('searchInput').value.toLowerCase().trim();
+  const descriptions = {
+    "all": "Affiche l’ensemble des ressources disponibles.",
+
+    "production": "Les ressources liées aux modes de production : pratiques agricoles, innovations, systèmes culturaux, etc.",
+    "viabilite": "Les ressources qui abordent la viabilité économique des exploitations.",
+    "travail": "Les ressources portant sur les conditions de travail, la pénibilité et l’organisation du travail.",
+    "collectif": "Les ressources concernant l’organisation collective, les coopérations et les dynamiques de groupe.",
+    "logistique": "Ressources liées à la logistique, aux circuits courts et à la distribution.",
+    "biodiversite": "Ressources portant sur la biodiversité cultivée, sauvage et fonctionnelle.",
+
+    "sytra": "Présentation de l’équipe SYTRA et de ses axes de recherche.",
+    "PEPA": "Présentation de l’équipe PEPA et de ses thématiques de travail.",
+    "AELab": "Présentation du AgroEcology Lab.",
+    "LAAP": "Présentation de l’équipe LAAP.",
+
+    "projet-nb": "Description de la thèse de Nicolas Biot.",
+    "projet-cc": "Description de la thèse de Céline Chevalier.",
+    "projet-ad": "Description de la thèse d’Antoinette Dumont.",
+    "projet-ultratree": "Présentation du projet Ultra Tree.",
+    "projet-spincoop": "Présentation du projet SPINCOOP."
+  };
+
+  // --- Injection du texte sous la zone des filtres ---
+  document.getElementById("filter-description").innerHTML =
+      descriptions[filter] || "";
 
   cards.forEach(card => {
     const matchesFilter = (filter === 'all' || card.classList.contains(filter));
@@ -618,3 +655,4 @@ document.getElementById('searchInput').addEventListener('input', () => {
   filterResources('all');
 });
 </script>
+
