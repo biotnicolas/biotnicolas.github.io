@@ -25,8 +25,6 @@ form: false
   <button onclick="filterResources('logistique')">Logistique & circuits courts</button>
   <button onclick="filterResources('biodiversite')">Biodiversité</button>
 </div>
-<div id="filter-description" class="filter-description"></div>
-
 
 <div id="filters" class="filters-team" style="margin-bottom: 20px;">
   <strong>Filtrer par Equipe de recherche :</strong><br>
@@ -34,8 +32,8 @@ form: false
   <button onclick="filterResources('PEPA')">Équipe PEPA</button>
   <button onclick="filterResources('AELab')">AgroEcology Lab</button>
   <button onclick="filterResources('LAAP')">Équipe LAAP</button>
-
 </div>
+<div id="description-team" class="filter-description"></div>
 
 <div id= "filters" class="filters-project" style="margin-bottom: 20px;">
   <strong>Filtrer par Projet :</strong><br>
@@ -44,6 +42,9 @@ form: false
   <button onclick="filterResources('projet-ad')">Thèse Antoinette Dumont</button>
   <button onclick="filterResources('projet-ultratree')">Projet Ultra Tree</button>
   <button onclick="filterResources('projet-spincoop')">Projet SPINCOOP</button>
+</div>
+
+<div id="description-project" class="filter-description"></div>
 
 
   <!-- Pour filtrer par type de document
@@ -53,7 +54,6 @@ form: false
   <button onclick="filterResources('memoire')">📘Mémoires</button>
   <button onclick="filterResources('rapport')">📑Rapports</button>
   <button onclick="filterResources('thèse')">🎓Thèses</button> -->
-</div>
 
 <!-- Barre de recherche par mot-clé -->
 <div style="margin-bottom: 20px;">
@@ -610,21 +610,19 @@ form: false
 function filterResources(filter) {
   const cards = document.querySelectorAll('.resource-card');
   const searchTerm = document.getElementById('searchInput').value.toLowerCase().trim();
-  const descriptions = {
-    "all": "Affiche l’ensemble des ressources disponibles.",
+   // Efface toutes les zones avant d'afficher la nouvelle
+  document.getElementById("description-team").innerHTML = "";
+  document.getElementById("description-project").innerHTML = "";
 
-    "production": "Les ressources liées aux modes de production : pratiques agricoles, innovations, systèmes culturaux, etc.",
-    "viabilite": "Les ressources qui abordent la viabilité économique des exploitations.",
-    "travail": "Les ressources portant sur les conditions de travail, la pénibilité et l’organisation du travail.",
-    "collectif": "Les ressources concernant l’organisation collective, les coopérations et les dynamiques de groupe.",
-    "logistique": "Ressources liées à la logistique, aux circuits courts et à la distribution.",
-    "biodiversite": "Ressources portant sur la biodiversité cultivée, sauvage et fonctionnelle.",
-
+  // Descriptions par catégorie
+    const teamDescriptions = {
     "sytra": "Présentation de l’équipe SYTRA et de ses axes de recherche.",
     "PEPA": "Présentation de l’équipe PEPA et de ses thématiques de travail.",
-    "AELab": "Présentation du AgroEcology Lab.",
-    "LAAP": "Présentation de l’équipe LAAP.",
+    "AELab": "Présentation du AgroEcology Lab, spécialisé en agroécologie.",
+    "LAAP": "Présentation de l’équipe LAAP."
+  };
 
+  const projectDescriptions = {
     "projet-nb": "Description de la thèse de Nicolas Biot.",
     "projet-cc": "Description de la thèse de Céline Chevalier.",
     "projet-ad": "Description de la thèse d’Antoinette Dumont.",
@@ -632,9 +630,15 @@ function filterResources(filter) {
     "projet-spincoop": "Présentation du projet SPINCOOP."
   };
 
-  // --- Injection du texte sous la zone des filtres ---
-  document.getElementById("filter-description").innerHTML =
-      descriptions[filter] || "";
+  // Affiche selon la catégorie
+  
+  if (teamDescriptions[filter]) {
+    document.getElementById("description-team").innerHTML = teamDescriptions[filter];
+  }
+  if (projectDescriptions[filter]) {
+    document.getElementById("description-project").innerHTML = projectDescriptions[filter];
+  }
+
 
   cards.forEach(card => {
     const matchesFilter = (filter === 'all' || card.classList.contains(filter));
