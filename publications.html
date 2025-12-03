@@ -612,8 +612,8 @@ function filterResources(filter) {
   const cards = document.querySelectorAll('.resource-card');
   const searchTerm = document.getElementById('searchInput').value.toLowerCase().trim();
    // Efface toutes les zones avant d'afficher la nouvelle
-  document.getElementById("description-team").innerHTML = "";
-  document.getElementById("description-project").innerHTML = "";
+  document.getElementById("description-team").innerHTML = "Cliquez sur un bouton pour afficher la description de l'équipe";
+  document.getElementById("description-project").innerHTML = "Cliquez sur un bouton pour afficher la description du projet";
 
   // Descriptions par catégorie
     const teamDescriptions = {
