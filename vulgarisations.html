@@ -25,6 +25,7 @@ form: false
   <button onclick="filterResources('logistique')">Logistique & circuits courts</button>
   <button onclick="filterResources('biodiversite')">Biodiversité</button>
 </div>
+<div id="description-team" class="filter-description"> <p>Cliquez sur un bouton pour afficher la description de l'équipe</p></div>
 
 <div id="filters" class="filters-team" style="margin-bottom: 20px;">
   <strong>Filtrer par Equipe de recherche :</strong><br>
@@ -41,6 +42,8 @@ form: false
   <button onclick="filterResources('projet-ultratree')">Projet Ultra Tree</button>
   <button onclick="filterResources('projet-spincoop')">Projet SPINCOOP</button>
 </div>
+<div id="description-project" class="filter-description"><p>Cliquez sur un bouton pour afficher la description du projet</p></div>
+
 <!-- Filtrer par type de document
   <br><br><strong>Filtrer par type :</strong><br>
   <button onclick="filterResources('video')">Vidéos</button>
@@ -614,11 +617,39 @@ form: false
 </style>
 
 <!-- 🧠 JS pour le filtre -->
-
 <script>
 function filterResources(filter) {
   const cards = document.querySelectorAll('.resource-card');
   const searchTerm = document.getElementById('searchInput').value.toLowerCase().trim();
+   // Efface toutes les zones avant d'afficher la nouvelle
+  document.getElementById("description-team").innerHTML = "";
+  document.getElementById("description-project").innerHTML = "";
+
+  // Descriptions par catégorie
+    const teamDescriptions = {
+    "sytra": 'Equipe de recherche SYTRA (UCLouvain): Transition of Food Systems. Lien vers le site du labo: <a href="https://sytra.be/fr/" target="_blank">SYTRA</a>.',
+    "PEPA": 'Equipe de recherche PEPA (UCLouvain): Plant Ecology, ecoPhysiology and sustainable Agriculture lab. Lien vers le site du labo: <a href="https://www.pepa.science/" target="_blank">PEPA</a>.',
+    "AELab": 'Equipe de recherche AgroEcology Lab (ULB): Lien vers le site du labo: <a href="https://www.agroecologie-ulb.net/" target="_blank">AELab</a>.',
+    "LAAP": 'Equipe de recherche LAAP (UCLouvain): Laboratoire d\'anthropologie prospective. Lien vers le site du labo: <a href="https://sites.uclouvain.be/laap-anthropologie-prospective/" target="_blank">LAAP</a>.'
+  };
+
+  const projectDescriptions = {
+    "projet-nb": 'Thèse réalisée en recherche-action participative portant sur la viabilité du maraîchage sur petites et moyennes surface dans la région du Coeur de Condroz.',
+    "projet-cc": 'Thèse portant sur les cultures associées de légumes',
+    "projet-ad": 'Thèse portant sur les conditions de travail et d\'emplois chez les producteurs de légumes frais en Wallonie.',
+    "projet-ultratree": 'Projet sur la viabilité du maraîchage en installation en zone péri-urbaine. Lien vers le projet: <a href="https://www.cocreate.brussels/projet/ultratree/" target="_blank">Ultra Tree</a>.',
+    "projet-spincoop": 'Projet sur la viabilité du maraîchage en zone urbaine. Lien vers le projet: <a href="https://www.cocreate.brussels/projet/spincoop/" target="_blank">SPINCOOP</a>.'
+  };
+
+  // Affiche selon la catégorie
+  
+  if (teamDescriptions[filter]) {
+    document.getElementById("description-team").innerHTML = teamDescriptions[filter];
+  }
+  if (projectDescriptions[filter]) {
+    document.getElementById("description-project").innerHTML = projectDescriptions[filter];
+  }
+
 
   cards.forEach(card => {
     const matchesFilter = (filter === 'all' || card.classList.contains(filter));
@@ -633,6 +664,7 @@ function filterResources(filter) {
     }
   });
 }
+
 
 // Quand on tape dans la barre de recherche, on applique le filtre “all” + recherche mot-clé
 document.getElementById('searchInput').addEventListener('input', () => {
