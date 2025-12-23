@@ -37,6 +37,21 @@
         </li-->
 
       </ul>
+      <div class="navbar-text last-update">
+  Mis à jour le {{ site.time | date: "%d/%m/%Y" }}
+</div>
     </div>
   </div>
 </nav>
+<style>
+.last-update {
+  font-size: 0.8rem;
+  color: #6c757d; /* gris Bootstrap */
+  padding: 4px 10px;
+  margin-left: 15px;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  background-color: #f8f9fa;
+  white-space: nowrap;
+}
+</style>
