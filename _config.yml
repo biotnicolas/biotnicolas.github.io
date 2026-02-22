@@ -3,7 +3,7 @@ email:              /
 description:        /
 author:             Nicolas Biot
 baseurl:            /
-url:                https://github.com/biotnicolas
+url:                https://maraichage-wallonie.be # valeur d'avant: https://github.com/biotnicolas
 
 # Social Profiles
 twitter_username:   /
